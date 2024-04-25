@@ -3,23 +3,25 @@ import styled from "styled-components";
 
 export const Menu = () => {
   return (
-    <StyledMenuList>
-      <li>
-        <a href="">Home</a>
-      </li>
-      <li>
-        <a href="">Skills</a>
-      </li>
-      <li>
-        <a href="">Works</a>
-      </li>
-      <li>
-        <a href="">Testimony</a>
-      </li>
-      <li>
-        <a href="">Contact</a>
-      </li>
-    </StyledMenuList>
+    <nav>
+      <StyledMenuList>
+        <li>
+          <a href="">Home</a>
+        </li>
+        <li>
+          <a href="">Skills</a>
+        </li>
+        <li>
+          <a href="">Works</a>
+        </li>
+        <li>
+          <a href="">Testimony</a>
+        </li>
+        <li>
+          <a href="">Contact</a>
+        </li>
+      </StyledMenuList>
+    </nav>
   )
 }
 
