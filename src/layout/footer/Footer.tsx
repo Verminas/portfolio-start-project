@@ -2,7 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import {SocialIconLinks} from "../../components/SocialIconLinks/SocialIconLinks";
 import {SectionTitle} from "../../components/SectionTitle/SectionTitle";
-import {socialIconsId} from "../../App";
+import {socialIconsId} from "../../index";
 
 export const Footer = () => {
   return (

@@ -4,9 +4,8 @@ import {Menu} from "../../components/Menu/Menu";
 import {SocialIconLinks} from "../../components/SocialIconLinks/SocialIconLinks";
 import styled from "styled-components";
 import {FlexBoxWrapper} from "../../components/FlexBoxWrapper";
-import {socialIconsId} from "../../App";
-
-const menuNavigationItems = ['Home', 'Skills', 'Works', 'Testimony', 'Contact' ];
+import {socialIconsId} from "../../index";
+import {menuNavigationItems} from "../../index";
 
 export const Header = () => {
   return (

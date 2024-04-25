@@ -8,19 +8,6 @@ import {Contact} from "./layout/sections/contact/Contact";
 import {Slogan} from "./layout/sections/slogan/Slogan";
 import {Footer} from "./layout/footer/Footer";
 
-export const socialIconsId = ['instSvg', 'vkSvg', 'telegramSvg', 'linkedinSvg'];
-
-const dataPage = {
-  header: {},
-  main: {},
-  skills: {},
-  works: {},
-  testimony: {},
-  contact: {},
-  slogan:{},
-  footer: {}
-};
-
 
 function App() {
     return (

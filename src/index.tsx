@@ -4,6 +4,22 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+export const menuNavigationItems = ['Home', 'Skills', 'Works', 'Testimony', 'Contact'];
+export const socialIconsId = ['instSvg', 'vkSvg', 'telegramSvg', 'linkedinSvg'];
+export const dataPage = {
+  header: {
+    menuNavigation: ['Home', 'Skills', 'Works', 'Testimony', 'Contact'],
+  },
+  main: {},
+  skills: {},
+  works: {},
+  testimony: {},
+  contact: {},
+  slogan: {},
+  footer: {}
+};
+
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
