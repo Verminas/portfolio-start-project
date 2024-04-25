@@ -7,13 +7,14 @@ import {Testimony} from "./layout/sections/testimony/Testimony";
 import {Contact} from "./layout/sections/contact/Contact";
 import {Slogan} from "./layout/sections/slogan/Slogan";
 import {Footer} from "./layout/footer/Footer";
+import {skillsInfo} from "./index";
 
 function App() {
     return (
         <div className="App">
           <Header/>
           <Main/>
-          <Skills/>
+          <Skills skillsInfo={skillsInfo}/>
           <Works/>
           <Testimony/>
           <Contact/>

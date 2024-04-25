@@ -6,6 +6,38 @@ import reportWebVitals from './reportWebVitals';
 
 export const menuNavigationItems = ['Home', 'Skills', 'Works', 'Testimony', 'Contact'];
 export const socialIconsId = ['instSvg', 'vkSvg', 'telegramSvg', 'linkedinSvg'];
+export const skillsInfo = [
+  {
+    iconId: 'htmlSvg',
+    title: 'html',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim',
+  },
+  {
+    iconId: 'cssSvg',
+    title: 'css3',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim',
+  },
+  {
+    iconId: 'reactSvg',
+    title: 'react',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim',
+  },
+  {
+    iconId: 'typeScriptSvg',
+    title: 'typescript',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim',
+  },
+  {
+    iconId: 'stylCompSvg',
+    title: 'styled components',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim',
+  },
+  {
+    iconId: 'figmaSvg',
+    title: 'web design',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim',
+  },
+];
 export const dataPage = {
   header: {},
   main: {

@@ -1,22 +1,26 @@
-import {FlexBoxWrapper} from "../FlexBoxWrapper";
 import {Icon} from "../Icon/Icon";
 import React from "react";
 import styled from "styled-components";
 
-export const Skill = () => {
+type SkillPropsType = {
+  iconId: string,
+  title: string,
+  text: string,
+}
+
+export const Skill = (props: SkillPropsType) => {
   return (
     <WrapperSkill>
-      <Icon iconId={'htmlSvg'}/>
-      <TitleSkill>HTML</TitleSkill>
-      <TextSkill>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua Ut enimю Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-        ut labore et dolore magna aliqua Ut enim</TextSkill>
+      <Icon iconId={props.iconId}/>
+      <TitleSkill>{props.title}</TitleSkill>
+      <TextSkill>{props.text}m</TextSkill>
     </WrapperSkill>
   )
 }
 
 const WrapperSkill = styled.div`
-    width: 33%;
+    width: 30%;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
