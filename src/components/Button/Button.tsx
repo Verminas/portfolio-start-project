@@ -13,5 +13,15 @@ export const Button = (props: ButtonPropsType) => {
 
 const StyledButton = styled.button`
     width: fit-content;
-    padding: 5px;
+    text-transform: uppercase;
+    border: none;
+    background-color: inherit;
+    &::after{
+        align-self: center;
+        content: "";
+        display: inline-block;
+        width: 75%;
+        height: 10px;
+        background-color: #7572d5;
+    }
 `

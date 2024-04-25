@@ -2,6 +2,7 @@ import imgWorkSrc1 from "../../assets/images/work1.webp";
 import {FlexBoxWrapper} from "../FlexBoxWrapper";
 import React from "react";
 import styled from "styled-components";
+import {Link} from "../Link/Link";
 
 export const WorkItem = () => {
   return (
@@ -12,8 +13,8 @@ export const WorkItem = () => {
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
           et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
         <FlexBoxWrapper>
-          <a href="#">Demo</a>
-          <a href="#">Code</a>
+          <Link href="#">Demo</Link>
+          <Link href="#">Code</Link>
         </FlexBoxWrapper>
       </WrapperInfo>
     </WrapperWorkItem>
