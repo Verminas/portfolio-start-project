@@ -5,12 +5,14 @@ import {SocialMedia} from "../../components/SocialMedia/SocialMedia";
 import styled from "styled-components";
 import {StyledFlexBoxWrapper} from "../../components/StyledFlexBoxWrapper";
 
+const menuNavigationItems = ['Home', 'Skills', 'Works', 'Testimony', 'Contact' ];
+
 export const Header = () => {
   return (
     <StyledHeader>
       <Logo/>
       <StyledFlexBoxWrapper align={'center'}>
-        <Menu/>
+        <Menu itemsNames={menuNavigationItems}/>
         <SocialMedia/>
       </StyledFlexBoxWrapper>
     </StyledHeader>
