@@ -1,7 +1,6 @@
 import React from 'react';
 import {SectionWrapper} from "../../../components/SectionWrapper";
 import {SectionTitle} from "../../../components/SectionTitle/SectionTitle";
-import {Button} from "../../../components/Button/Button";
 import {Link} from "../../../components/Link/Link";
 
 export const Slogan = () => {

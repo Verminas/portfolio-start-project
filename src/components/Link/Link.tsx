@@ -13,10 +13,12 @@ export const Link = (props: LinkPropsType) => {
 };
 
 const StyledLink = styled.a`
-  text-transform: uppercase;
+    text-transform: uppercase;
     display: flex;
     flex-direction: column;
-    &::after{
+    padding: 5px;
+
+    &::after {
         margin-top: -3px;
         align-self: center;
         content: "";

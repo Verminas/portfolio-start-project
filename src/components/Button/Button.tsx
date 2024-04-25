@@ -16,6 +16,8 @@ const StyledButton = styled.button`
     text-transform: uppercase;
     border: none;
     background-color: inherit;
+    padding: 5px;
+    
     &::after{
         align-self: center;
         content: "";

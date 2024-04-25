@@ -1,9 +1,10 @@
 import React from 'react';
 import {Logo} from "../../components/Logo/Logo";
 import {Menu} from "../../components/Menu/Menu";
-import {SocialMedia} from "../../components/SocialMedia/SocialMedia";
+import {SocialIconLinks} from "../../components/SocialIconLinks/SocialIconLinks";
 import styled from "styled-components";
 import {FlexBoxWrapper} from "../../components/FlexBoxWrapper";
+import {socialIconsId} from "../../App";
 
 const menuNavigationItems = ['Home', 'Skills', 'Works', 'Testimony', 'Contact' ];
 
@@ -13,7 +14,7 @@ export const Header = () => {
       <Logo/>
       <FlexBoxWrapper align={'center'}>
         <Menu itemsNames={menuNavigationItems}/>
-        <SocialMedia/>
+        <SocialIconLinks socialIconsId={socialIconsId}/>
       </FlexBoxWrapper>
     </StyledHeader>
   );
