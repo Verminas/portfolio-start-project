@@ -1,19 +1,19 @@
 import React from 'react';
-import {StyledFlexBoxWrapper} from "../../../components/StyledFlexBoxWrapper";
-import {StyledSectionWrapper} from "../../../components/StyledSectionWrapper";
+import {FlexBoxWrapper} from "../../../components/FlexBoxWrapper";
+import {SectionWrapper} from "../../../components/SectionWrapper";
 import imgProfile from "../../../assets/images/profile-photo.webp";
 import styled from "styled-components";
 
 export const Main = () => {
   return (
-    <StyledSectionWrapper direction="row" justify={'space-around'}>
-      <StyledFlexBoxWrapper direction={'column'} gap={'10px'}>
+    <SectionWrapper id={'home'} direction="row" justify={'space-around'} height={'100vh'}>
+      <FlexBoxWrapper direction={'column'} gap={'10px'}>
         <span>Hi There</span>
         <h2>I am Svetlana Dyablo</h2>
         <h1>A Wev Developer.</h1>
-      </StyledFlexBoxWrapper>
+      </FlexBoxWrapper>
       <Photo src={imgProfile} alt="profile photo" />
-    </StyledSectionWrapper>
+    </SectionWrapper>
 );
 };
 

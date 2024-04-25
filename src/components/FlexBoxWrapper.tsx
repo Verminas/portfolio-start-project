@@ -8,7 +8,7 @@ type StyledFlexBoxWrapperPropsType = {
   gap?: string,
 }
 
-export const StyledFlexBoxWrapper = styled.div<StyledFlexBoxWrapperPropsType>`
+export const FlexBoxWrapper = styled.div<StyledFlexBoxWrapperPropsType>`
     display: flex;
     flex-direction: ${props => props.direction || "row"};
     justify-content: ${props => props.justify || "flex-start"};

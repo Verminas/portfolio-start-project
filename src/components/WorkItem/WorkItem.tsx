@@ -1,5 +1,5 @@
 import imgWorkSrc1 from "../../assets/images/work1.webp";
-import {StyledFlexBoxWrapper} from "../StyledFlexBoxWrapper";
+import {FlexBoxWrapper} from "../FlexBoxWrapper";
 import React from "react";
 import styled from "styled-components";
 
@@ -11,10 +11,10 @@ export const WorkItem = () => {
         <h3>Social Network</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
           et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-        <StyledFlexBoxWrapper>
+        <FlexBoxWrapper>
           <a href="#">Demo</a>
           <a href="#">Code</a>
-        </StyledFlexBoxWrapper>
+        </FlexBoxWrapper>
       </WrapperInfo>
     </WrapperWorkItem>
   )

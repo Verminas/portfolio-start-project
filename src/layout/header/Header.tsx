@@ -3,7 +3,7 @@ import {Logo} from "../../components/Logo/Logo";
 import {Menu} from "../../components/Menu/Menu";
 import {SocialMedia} from "../../components/SocialMedia/SocialMedia";
 import styled from "styled-components";
-import {StyledFlexBoxWrapper} from "../../components/StyledFlexBoxWrapper";
+import {FlexBoxWrapper} from "../../components/FlexBoxWrapper";
 
 const menuNavigationItems = ['Home', 'Skills', 'Works', 'Testimony', 'Contact' ];
 
@@ -11,10 +11,10 @@ export const Header = () => {
   return (
     <StyledHeader>
       <Logo/>
-      <StyledFlexBoxWrapper align={'center'}>
+      <FlexBoxWrapper align={'center'}>
         <Menu itemsNames={menuNavigationItems}/>
         <SocialMedia/>
-      </StyledFlexBoxWrapper>
+      </FlexBoxWrapper>
     </StyledHeader>
   );
 };

@@ -1,4 +1,4 @@
-import {StyledFlexBoxWrapper} from "../StyledFlexBoxWrapper";
+import {FlexBoxWrapper} from "../FlexBoxWrapper";
 import {Icon} from "../Icon/Icon";
 import React from "react";
 import styled from "styled-components";

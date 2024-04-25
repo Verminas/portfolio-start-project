@@ -1,22 +1,22 @@
 import React from 'react';
-import {StyledSectionWrapper} from "../../../components/StyledSectionWrapper";
-import {StyledFlexBoxWrapper} from "../../../components/StyledFlexBoxWrapper";
+import {SectionWrapper} from "../../../components/SectionWrapper";
+import {FlexBoxWrapper} from "../../../components/FlexBoxWrapper";
 import {Skill} from "../../../components/Skill/Skill";
 import {SectionTitle} from "../../../components/SectionTitle/SectionTitle";
 
 export const Skills = () => {
   return (
-  <StyledSectionWrapper>
+  <SectionWrapper id={'skills'}>
     <SectionTitle>My Skills</SectionTitle>
-    <StyledFlexBoxWrapper wrap={'wrap'} gap={'0'}>
+    <FlexBoxWrapper wrap={'wrap'} gap={'0'}>
       <Skill/>
       <Skill/>
       <Skill/>
       <Skill/>
       <Skill/>
       <Skill/>
-    </StyledFlexBoxWrapper>
-  </StyledSectionWrapper>
+    </FlexBoxWrapper>
+  </SectionWrapper>
   );
 };
 

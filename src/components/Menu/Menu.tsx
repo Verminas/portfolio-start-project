@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 type MenuPropsType = {
   itemsNames: Array<string>,
+  itemsId?: Array<string>,
 }
 
 
@@ -10,7 +11,7 @@ export const Menu = (props: MenuPropsType) => {
   const menuItemsElements = props.itemsNames.map((menuItem) => {
     return (
       <li>
-        <a href="#">{menuItem}</a>
+        <a href={`#${menuItem.toLowerCase()}`}>{menuItem}</a>
       </li>
     )
   })

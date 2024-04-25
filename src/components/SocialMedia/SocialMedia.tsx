@@ -34,7 +34,9 @@ const StyledSocialMediaList = styled.ul`
     gap: 5px;
     
     svg{
-        width: 35px;
-        height: 35px;
+        min-width: 15px;
+        min-height: 15px;
+        max-width: 35px;
+        max-height: 35px;
     }
 `
