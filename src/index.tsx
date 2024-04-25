@@ -7,16 +7,104 @@ import reportWebVitals from './reportWebVitals';
 export const menuNavigationItems = ['Home', 'Skills', 'Works', 'Testimony', 'Contact'];
 export const socialIconsId = ['instSvg', 'vkSvg', 'telegramSvg', 'linkedinSvg'];
 export const dataPage = {
-  header: {
-    menuNavigation: ['Home', 'Skills', 'Works', 'Testimony', 'Contact'],
+  header: {},
+  main: {
+    name: '',
   },
-  main: {},
-  skills: {},
-  works: {},
-  testimony: {},
-  contact: {},
-  slogan: {},
-  footer: {}
+  skills: {
+    title: '',
+    skillItems: [
+      {
+        iconId: '',
+        title: '',
+        text: '',
+      },
+      {
+        iconId: '',
+        title: '',
+        text: '',
+      },
+      {
+        iconId: '',
+        title: '',
+        text: '',
+      },
+      {
+        iconId: '',
+        title: '',
+        text: '',
+      },
+      {
+        iconId: '',
+        title: '',
+        text: '',
+      },
+      {
+        iconId: '',
+        title: '',
+        text: '',
+      },
+    ],
+  },
+  works: {
+    title: '',
+    tabItems: {},
+    projects: [
+      {
+        projImg: '',
+        projTitle: '',
+        projDescription: '',
+      }
+    ],
+  },
+  testimony: {
+    title: '',
+    sliderInfo: {
+      slides: [
+        {
+          text: '',
+          name: '',
+        }
+      ]
+    }
+  },
+  contact: {
+    title: '',
+
+  },
+  slogan: {
+    title: '',
+    buttonName: '',
+  },
+  footer: {
+    title: '',
+    copyRight: ''
+  },
+  components: {
+    menuNavigation: ['Home', 'Skills', 'Works', 'Testimony', 'Contact'],
+    socialIcons: [
+      {
+        iconId: 'instSvg',
+        iconHref: "#",
+        iconTitle: 'My Instagram',
+      },
+      {
+        iconId: 'vkSvg',
+        iconHref: "#",
+        iconTitle: 'My Vkontakte',
+      },
+      {
+        iconId: 'telegramSvg',
+        iconHref: "#",
+        iconTitle: 'My Telegram',
+      },
+      {
+        iconId: 'linkedinSvg',
+        iconHref: "#",
+        iconTitle: 'My LinkedIn',
+      },
+    ]
+  }
 };
 
 

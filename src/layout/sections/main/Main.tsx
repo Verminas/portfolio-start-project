@@ -9,7 +9,7 @@ export const Main = () => {
     <SectionWrapper id={'home'} direction="row" justify={'space-around'} height={'100vh'}>
       <FlexBoxWrapper direction={'column'} gap={'10px'}>
         <span>Hi There</span>
-        <h2>I am Svetlana Dyablo</h2>
+        <h2>I am <span>Svetlana Dyablo</span></h2>
         <h1>A Wev Developer.</h1>
       </FlexBoxWrapper>
       <Photo src={imgProfile} alt="profile photo" />
