@@ -5,11 +5,17 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.App{
+  position: relative;
+
 }
 .App, .App h2{
   color: #FFFFFF;
@@ -27,6 +33,7 @@ code {
   padding: 0;
   text-decoration: none;
   color: inherit;
+  scroll-behavior: smooth;
 }
 svg{
   max-width: 50px;
