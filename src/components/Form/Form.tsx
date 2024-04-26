@@ -23,4 +23,6 @@ const StyledForm = styled.form`
 `
 const Field = styled.input`
     width: 100%;
+    background: #252527;
+    
 `

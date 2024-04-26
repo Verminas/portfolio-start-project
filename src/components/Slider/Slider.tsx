@@ -24,7 +24,6 @@ const StyledSlider = styled.div`
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    background-color: aqua;
 `
 const Pagination = styled.div`
     display: flex;

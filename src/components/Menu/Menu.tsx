@@ -27,4 +27,21 @@ export const Menu = (props: MenuPropsType) => {
 const StyledMenuList = styled.ul`
     display: flex;
     gap: 10px;
+    
+    a{
+        position: relative;
+        &:hover, &:active, &:focus {
+            &::after {
+                top: 90%;
+                left: 10%;
+                position: absolute;
+                align-self: center;
+                content: "";
+                display: inline-block;
+                width: 80%;
+                height: 10px;
+                background-color: #7572d5;
+            }
+        }
+    }
 `

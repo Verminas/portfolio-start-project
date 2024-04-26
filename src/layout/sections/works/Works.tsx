@@ -5,16 +5,30 @@ import {Menu} from "../../../components/Menu/Menu";
 import {FlexBoxWrapper} from "../../../components/FlexBoxWrapper";
 import {WorkItem} from "../../../components/WorkItem/WorkItem";
 
-const menuTabItems = ['All', 'Landing Page', 'React', 'Spa' ];
+type WorksPropsType = {
+  worksInfo: {
+    itemsNames: Array<string>,
+    projects: {
+      projImg: string,
+      projTitle: string,
+      projText: string,
+    }[]
+  }
+}
 
-export const Works = () => {
+export const Works = (props: WorksPropsType) => {
+  const workItemsElements = props.worksInfo.projects.map(workItem => {
+    return (
+      <WorkItem projImg={workItem.projImg} projTitle={workItem.projTitle} projText={workItem.projText} />
+    )
+  })
+
   return (
     <SectionWrapper id={'works'}>
       <SectionTitle>My Works</SectionTitle>
-      <Menu itemsNames={menuTabItems}/>
+      <Menu itemsNames={props.worksInfo.itemsNames}/>
       <FlexBoxWrapper justify={'space-between'}>
-        <WorkItem/>
-        <WorkItem/>
+        {workItemsElements}
       </FlexBoxWrapper>
     </SectionWrapper>
   );

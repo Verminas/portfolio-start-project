@@ -21,6 +21,8 @@ const StyledSlide = styled.div`
     flex-direction: column;
     gap: 20px;
     align-items: center;
+    
+    text-align: center;
 `
 const SlideText = styled.p``
 const SlideName = styled.span``

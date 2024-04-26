@@ -23,4 +23,5 @@ const StyledHeader = styled.header`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #1f1f20;;
 `

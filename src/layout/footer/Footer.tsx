@@ -20,6 +20,7 @@ const StyledFooter = styled.footer`
     gap: 15px;
     align-items: center;
     padding: 30px;
+    background-color: #1f1f20;
 `
 const Title = styled(SectionTitle)`
     font-weight: 700;

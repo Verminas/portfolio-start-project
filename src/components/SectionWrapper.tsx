@@ -10,7 +10,7 @@ type StyledSectionWrapperPropsType = {
   height?: string,
 }
 
-export const SectionWrapper = styled.div<StyledSectionWrapperPropsType>`
+export const SectionWrapper = styled.section<StyledSectionWrapperPropsType>`
     display: flex;
     flex-direction: ${props => props.direction || "column"};
     justify-content: ${props => props.justify || "center"};

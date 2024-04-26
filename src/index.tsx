@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+// src для картинок
+import imgWorkSrc1 from './assets/images/work1.webp';
+import imgWorkSrc2 from './assets/images/work2.webp';
 
 export const menuNavigationItems = ['Home', 'Skills', 'Works', 'Testimony', 'Contact'];
 export const socialIconsId = ['instSvg', 'vkSvg', 'telegramSvg', 'linkedinSvg'];
@@ -38,6 +41,25 @@ export const skillsInfo = [
     text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim',
   },
 ];
+export const worksInfo = {
+  itemsNames: ['All', 'Landing Page', 'React', 'Spa' ],
+  projects: [
+  {
+    projImg: imgWorkSrc1,
+    projTitle: 'social network',
+    projText: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ' +
+      'ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+  },
+  {
+    projImg: imgWorkSrc2,
+    projTitle: 'timer',
+    projText: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ' +
+      'ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+  }
+]
+};
+
+
 export const dataPage = {
   header: {},
   main: {

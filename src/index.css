@@ -11,6 +11,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.App, .App h2{
+  color: #FFFFFF;
+}
+.App section:nth-child(2n){
+  background-color: #1f1f20;
+}
+.App section:nth-child(2n + 1){
+  background: #252527;
+}
 
 /*my attempt to reset styles*/
 *{
