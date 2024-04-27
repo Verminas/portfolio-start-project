@@ -1,6 +1,6 @@
 import React from 'react';
 import {Logo} from "../../components/Logo/Logo";
-import {Menu} from "../../components/Menu/Menu";
+import {TabMenu} from "../sections/works/TabMenu/TabMenu";
 import {SocialIconLinks} from "../../components/SocialIconLinks/SocialIconLinks";
 import styled from "styled-components";
 import {FlexBoxWrapper} from "../../components/FlexBoxWrapper";
@@ -8,7 +8,7 @@ import {socialIconsId} from "../../index";
 import {menuNavigationItems} from "../../index";
 import {Container} from "../../components/Container";
 import {theme} from "../../styles/Theme";
-import {HeaderMenu} from "./headerMenu/HeaderMenu";
+import {HeaderMenu} from "./HeaderMenu/HeaderMenu";
 
 export const Header = () => {
   return (

@@ -1,7 +1,7 @@
-import {Icon} from "../Icon/Icon";
+import {Icon} from "../../../../components/Icon/Icon";
 import React from "react";
 import styled from "styled-components";
-import {theme} from "../../styles/Theme";
+import {theme} from "../../../../styles/Theme";
 
 type SkillPropsType = {
   iconId: string,
@@ -15,7 +15,7 @@ export const Skill = (props: SkillPropsType) => {
       <WrapperIcon>
         <Icon iconId={props.iconId}/>
       </WrapperIcon>
-      <TitleSkill>{props.title.toUpperCase()}</TitleSkill>
+      <TitleSkill>{props.title}</TitleSkill>
       <TextSkill>{props.text}m</TextSkill>
     </WrapperSkill>
   )
@@ -33,19 +33,13 @@ const WrapperSkill = styled.div`
     flex-wrap: wrap;
 `
 const TitleSkill = styled.h3`
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 16px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-align: center;
+    text-transform: uppercase;
     margin: 70px 0 15px;
+    text-align: center;
 `
 
 const TextSkill = styled.p`
-    font-size: 14px;
-    font-weight: 400;
     text-align: center;
-    line-height: 1.4;
 `
 const WrapperIcon = styled.div`
     position: relative;

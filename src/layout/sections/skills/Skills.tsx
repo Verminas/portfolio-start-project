@@ -1,7 +1,7 @@
 import React from 'react';
 import {SectionWrapper} from "../../../components/SectionWrapper";
 import {FlexBoxWrapper} from "../../../components/FlexBoxWrapper";
-import {Skill} from "../../../components/Skill/Skill";
+import {Skill} from "./Skill/Skill";
 import {SectionTitle} from "../../../components/SectionTitle/SectionTitle";
 import {Container} from "../../../components/Container";
 

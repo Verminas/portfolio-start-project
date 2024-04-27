@@ -33,6 +33,10 @@ export const GlobalStyle = createGlobalStyle`
     button{
         background-color: unset;
         border: none;
+        font-family: inherit;
+        cursor: pointer;
+        color: inherit;
+        text-align: center;
     }
 
     code {
@@ -60,5 +64,17 @@ export const GlobalStyle = createGlobalStyle`
         max-width: 50px;
         max-height: 50px;
         fill: ${theme.colors.accent};
+    }
+    h3{
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+    
+    p{
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.4;
     }
 `

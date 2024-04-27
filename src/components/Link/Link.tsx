@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
+import {theme} from "../../styles/Theme";
 
 type LinkPropsType = {
   href: string,
@@ -13,18 +14,32 @@ export const Link = (props: LinkPropsType) => {
 };
 
 const StyledLink = styled.a`
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-align: center;
     text-transform: uppercase;
-    display: flex;
-    flex-direction: column;
-    padding: 5px;
+    padding: 10px;
 
-    &::after {
-        margin-top: -3px;
-        align-self: center;
-        content: "";
+    position: relative;
+    z-index: 1;
+
+    &:hover{
+        &::before{
+            height: 10px;
+        }
+    }
+
+    &::before{
         display: inline-block;
-        width: 80%;
-        height: 10px;
-        background-color: #7572d5;
+        content: "";
+        width: 100%;
+        height: 0;
+        background-color: ${theme.colors.accent};
+
+        position: absolute;
+        bottom: 5px;
+        left: 0;
+        z-index: -1;
     }
 `
