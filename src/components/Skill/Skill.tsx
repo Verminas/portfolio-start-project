@@ -12,7 +12,7 @@ export const Skill = (props: SkillPropsType) => {
   return (
     <WrapperSkill>
       <Icon iconId={props.iconId}/>
-      <TitleSkill>{props.title}</TitleSkill>
+      <TitleSkill>{props.title.toUpperCase()}</TitleSkill>
       <TextSkill>{props.text}m</TextSkill>
     </WrapperSkill>
   )

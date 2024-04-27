@@ -6,25 +6,32 @@ import styled from "styled-components";
 import {FlexBoxWrapper} from "../../components/FlexBoxWrapper";
 import {socialIconsId} from "../../index";
 import {menuNavigationItems} from "../../index";
+import {Container} from "../../components/Container";
+import {theme} from "../../styles/Theme";
+import {HeaderMenu} from "./headerMenu/HeaderMenu";
 
 export const Header = () => {
   return (
     <StyledHeader>
-      <Logo/>
-      <FlexBoxWrapper align={'center'}>
-        <Menu itemsNames={menuNavigationItems}/>
-        <SocialIconLinks socialIconsId={socialIconsId}/>
-      </FlexBoxWrapper>
+      <Container>
+        <FlexBoxWrapper justify="space-between" align="center">
+          <Logo/>
+          <FlexBoxWrapper align={'center'} justify={"space-evenly"}>
+            <HeaderMenu itemsNames={menuNavigationItems}/>
+            <SocialIconLinks socialIconsId={socialIconsId}/>
+          </FlexBoxWrapper>
+        </FlexBoxWrapper>
+      </Container>
     </StyledHeader>
   );
 };
 
 const StyledHeader = styled.header`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #1f1f20;
+    background-color: ${theme.colors.primaryBg};
+    padding: 20px 0;
     position: sticky;
     top: 0;
     left: 0;
+    right: 0;
+    z-index: 999;
 `

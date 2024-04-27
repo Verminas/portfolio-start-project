@@ -10,6 +10,7 @@ type StyledFlexBoxWrapperPropsType = {
 
 export const FlexBoxWrapper = styled.div<StyledFlexBoxWrapperPropsType>`
     display: flex;
+    width: 100%;
     flex-direction: ${props => props.direction || "row"};
     justify-content: ${props => props.justify || "flex-start"};
     align-items: ${props => props.align || "stretch"};

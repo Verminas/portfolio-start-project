@@ -16,8 +16,6 @@ export const SectionWrapper = styled.section<StyledSectionWrapperPropsType>`
     justify-content: ${props => props.justify || "center"};
     align-items: ${props => props.align || "center"};
     flex-wrap: ${props => props.wrap || "nowrap"};
-    gap: ${props => props.gap || "60px"};
+    gap: ${props => props.gap || "20px"};
     height: ${props => props.height || "100vh"};
-    
-    padding: 30px;
 `

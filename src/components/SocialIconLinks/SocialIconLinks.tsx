@@ -14,7 +14,7 @@ export const SocialIconLinks = (props: SocialIconLinksPropsType) => {
     return (
       <li>
         <a href="#">
-          <Icon iconId={socialIconId} width={'20'} height={'20'} viewBox={'0 0 20 20'}></Icon>
+          <Icon iconId={socialIconId} width={'50'} height={'50'} viewBox={'0 0 20 20'}></Icon>
         </a>
       </li>
     )
