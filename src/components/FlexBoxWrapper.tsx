@@ -6,11 +6,12 @@ type StyledFlexBoxWrapperPropsType = {
   align?: string,
   wrap?: string,
   gap?: string,
+  width?: string,
 }
 
 export const FlexBoxWrapper = styled.div<StyledFlexBoxWrapperPropsType>`
     display: flex;
-    width: 100%;
+    width: ${props => props.width || "100%"};
     flex-direction: ${props => props.direction || "row"};
     justify-content: ${props => props.justify || "flex-start"};
     align-items: ${props => props.align || "stretch"};
