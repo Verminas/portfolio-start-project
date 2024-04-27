@@ -41,7 +41,7 @@ const TitleSkill = styled.h3`
 const TextSkill = styled.p`
     text-align: center;
 `
-const WrapperIcon = styled.div`
+export const WrapperIcon = styled.div`
     position: relative;
     z-index: 1;
     &::before{

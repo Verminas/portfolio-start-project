@@ -24,5 +24,14 @@ const StyledSlide = styled.div`
     
     text-align: center;
 `
-const SlideText = styled.p``
-const SlideName = styled.span``
+const SlideText = styled.p`
+    margin: 40px 0 15px;
+`
+const SlideName = styled.span`
+    text-transform: uppercase;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-align: center;
+`
