@@ -35,14 +35,6 @@ export const GlobalStyle = createGlobalStyle`
         border: none;
     }
 
-    .josefin-sans {
-        font-family: "Josefin Sans", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: bold /regular/ semibold;
-        font-style: normal;
-    }
-
-
     code {
         font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
         monospace;
@@ -51,6 +43,9 @@ export const GlobalStyle = createGlobalStyle`
     .App {
         position: relative;
 
+    }
+    section{
+        padding: 100px 0;
     }
 
     section:nth-child(2n) {

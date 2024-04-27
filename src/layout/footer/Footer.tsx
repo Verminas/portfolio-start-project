@@ -22,11 +22,13 @@ const StyledFooter = styled.footer`
     padding: 30px;
     background-color: #1f1f20;
 `
-const Title = styled(SectionTitle)`
-    font-weight: 700;
+const Title = styled.h2`
+    font-family: 'Josefin Sans', sans-serif;
     font-size: 22px;
-    letter-spacing: 0.14em;
-    color: inherit;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-align: center;
+
 `
 
 const Copyright = styled.span``

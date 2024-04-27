@@ -16,7 +16,7 @@ export const Header = () => {
       <Container>
         <FlexBoxWrapper justify="space-between" align="center">
           <Logo/>
-          <FlexBoxWrapper align={'center'} justify={"space-evenly"}>
+          <FlexBoxWrapper align={'center'} justify={"flex-end"}>
             <HeaderMenu itemsNames={menuNavigationItems}/>
             <SocialIconLinks socialIconsId={socialIconsId}/>
           </FlexBoxWrapper>
