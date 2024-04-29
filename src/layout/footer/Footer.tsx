@@ -1,26 +1,28 @@
 import React from 'react';
 import styled from "styled-components";
 import {SocialIconLinks} from "../../components/SocialIconLinks/SocialIconLinks";
-import {SectionTitle} from "../../components/SectionTitle/SectionTitle";
 import {socialIconsId} from "../../index";
+import {theme} from "../../styles/Theme";
+import {Container} from "../../components/Container";
+import {FlexBoxWrapper} from "../../components/FlexBoxWrapper";
 
 export const Footer = () => {
   return (
     <StyledFooter>
-      <Title>Svetlana</Title>
-      <SocialIconLinks socialIconsId={socialIconsId}/>
-      <Copyright>&copy; 2023 Svetlana Dyablo, All Rights Reserved.</Copyright>
+      <Container>
+        <FlexBoxWrapper direction="column" gap="30px" align="center" justify="center">
+          <Title>Svetlana</Title>
+          <SocialIconLinks socialIconsId={socialIconsId}/>
+          <Copyright>&copy; 2023 Svetlana Dyablo, All Rights Reserved.</Copyright>
+        </FlexBoxWrapper>
+      </Container>
     </StyledFooter>
   );
 };
 
 const StyledFooter = styled.footer`
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    align-items: center;
-    padding: 30px;
-    background-color: #1f1f20;
+    padding: 40px;
+    background-color: ${theme.colors.primaryBg};
 `
 const Title = styled.h2`
     font-family: 'Josefin Sans', sans-serif;
@@ -28,7 +30,12 @@ const Title = styled.h2`
     font-weight: 700;
     letter-spacing: 3px;
     text-align: center;
-
 `
 
-const Copyright = styled.span``
+const Copyright = styled.span`
+    font-size: 12px;
+    font-weight: 400;
+    text-align: center;
+    color: ${theme.colors.font};
+    opacity: 50%;
+`

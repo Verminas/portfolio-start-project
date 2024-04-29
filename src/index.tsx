@@ -9,7 +9,7 @@ import imgWorkSrc2 from './assets/images/work2.webp';
 import {GlobalStyle} from "./styles/Global.styled";
 
 export const menuNavigationItems = ['Home', 'Skills', 'Works', 'Testimony', 'Contact'];
-export const socialIconsId = ['instSvg', 'vkSvg', 'telegramSvg', 'linkedinSvg'];
+export const socialIconsId = ['instSvg', 'telegramSvg', 'vkSvg', 'linkedinSvg'];
 export const skillsInfo = [
   {
     iconId: 'htmlSvg',

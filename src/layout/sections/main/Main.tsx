@@ -65,6 +65,7 @@ const Name = styled.h2`
     text-align: left;
     
     span{
+        white-space: nowrap;
         position: relative;
         z-index: 1;
         &::after{
