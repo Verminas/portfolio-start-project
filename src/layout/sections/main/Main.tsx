@@ -8,7 +8,7 @@ import {theme} from "../../../styles/Theme";
 
 export const Main = () => {
   return (
-    <SectionWrapper id={'home'} direction="row" height={'100vh'}>
+    <SectionWrapper id={'home'} height={'100vh'}>
       <Container>
         <FlexBoxWrapper justify="space-between" align="center" gap={"20px"}>
           <FlexBoxWrapper direction={'column'} gap={'10px'} width={'fit-content'}>

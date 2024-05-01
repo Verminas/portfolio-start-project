@@ -11,6 +11,9 @@ export const GlobalStyle = createGlobalStyle`
     }
     *{
         scroll-behavior: smooth;
+        &:focus-visible{
+            outline: 2px solid ${theme.colors.accent};
+        }
     }
 
     body {

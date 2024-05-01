@@ -27,7 +27,7 @@ const WrapperSkill = styled.div`
     padding: 30px 20px 40px 20px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: stretch;
     align-items: center;
     text-align: center;
     flex-wrap: wrap;
@@ -40,6 +40,7 @@ const TitleSkill = styled.h3`
 
 const TextSkill = styled.p`
     text-align: center;
+    flex-grow: 1;
 `
 export const WrapperIcon = styled.div`
     position: relative;
