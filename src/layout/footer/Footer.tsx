@@ -5,6 +5,7 @@ import {socialIconsId} from "../../index";
 import {theme} from "../../styles/Theme";
 import {Container} from "../../components/Container";
 import {FlexBoxWrapper} from "../../components/FlexBoxWrapper";
+import {font} from "../../styles/Common";
 
 export const Footer = () => {
   return (
@@ -21,13 +22,11 @@ export const Footer = () => {
 };
 
 const StyledFooter = styled.footer`
-    padding: 40px;
     background-color: ${theme.colors.primaryBg};
+    padding: 40px 0;
 `
 const Title = styled.h2`
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 22px;
-    font-weight: 700;
+    ${font({family: "'Josefin Sans', sans-serif", weight: 700, Fmin: 16, Fmax: 22})};
     letter-spacing: 3px;
     text-align: center;
 `
