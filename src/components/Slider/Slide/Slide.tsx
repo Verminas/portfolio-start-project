@@ -19,9 +19,8 @@ export const Slide = () => {
 const StyledSlide = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    //gap: 20px;
     align-items: center;
-    
     text-align: center;
 `
 const SlideText = styled.p`
