@@ -31,8 +31,9 @@ export const WorkItem = (props: WorkItemPropsType) => {
 }
 
 const WrapperWorkItem = styled.div`
-    max-width: 540px;
+    width: 330px;
     display: flex;
+    flex-grow: 1;
     flex-direction: column;
     align-items: stretch;
     justify-content: space-between;
@@ -42,39 +43,67 @@ const WrapperWorkItem = styled.div`
        text-transform: uppercase;
         padding: 10px 0;
     }
+    
+    @media ${theme.media.desktop} {
+        max-width: 540px;
+    }
 `
 const WrapperImage = styled.div`
     img {
         width: 100%;
+        object-fit: cover;
+        @media ${theme.media.mobile} {
+            height: 260px;
+        }
     }
+
     position: relative;
-    &:hover{
-        &::before{
-            content: "";
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(5px);
-        }
-        & button{
-            opacity: 1;
-        }
-        
-    }
+
     & button {
         opacity: 0;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        &::after{
+
+        &::after {
             width: 100%;
             height: 100%;
         }
     }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(5px);
+        opacity: 0;
+    }
+
+    &:hover {
+        &::before {
+            opacity: 1;
+        }
+
+        & button {
+            opacity: 1;
+        }
+    }
+
+    @media ${theme.media.tablet} {
+        &::before {
+            opacity: 1;
+        }
+
+        & button {
+            opacity: 1;
+        }
+    }
+
 `
 
 const WrapperInfo = styled.div`
@@ -88,4 +117,5 @@ const Title = styled.h3`
 
 const Text = styled.p`
     margin: 15px 0 10px;
+    flex-grow: 1;
 `

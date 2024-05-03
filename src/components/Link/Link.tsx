@@ -42,4 +42,8 @@ const StyledLink = styled.a`
         left: 0;
         z-index: -1;
     }
+    
+    @media ${theme.media.mobile} {
+        padding: 5px;
+    }
 `

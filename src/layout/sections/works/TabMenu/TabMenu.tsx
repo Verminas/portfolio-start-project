@@ -26,6 +26,8 @@ export const TabMenu = (props: TabMenuPropsType) => {
 
 const StyledMenuList = styled.ul`
     display: flex;
-    gap: 20px;
-    margin-bottom: 40px;
+    justify-content: space-between;
+    margin: 0 auto 40px;
+    max-width: 352px;
+    width: 100%;
 `

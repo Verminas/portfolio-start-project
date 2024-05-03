@@ -30,7 +30,7 @@ export const Works = (props: WorksPropsType) => {
         <FlexBoxWrapper direction={'column'} gap={'0'} align={'center'} wrap={'wrap'}>
           <SectionTitle>My Works</SectionTitle>
           <TabMenu itemsNames={props.worksInfo.itemsNames}/>
-          <FlexBoxWrapper justify={'space-around'} wrap={'wrap'} align={'flex-start'}>
+          <FlexBoxWrapper justify={'space-around'} wrap={'wrap'} align={'flex-start'} gap={"30px"}>
             {workItemsElements}
           </FlexBoxWrapper>
         </FlexBoxWrapper>
