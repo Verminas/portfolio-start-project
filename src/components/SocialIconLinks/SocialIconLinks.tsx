@@ -1,11 +1,12 @@
 import React from "react";
 import {Icon} from "../Icon/Icon";
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 import {theme} from "../../styles/Theme";
 
 
 type SocialIconLinksPropsType = {
   socialIconsId: Array<string>,
+  isHeader?: boolean | undefined,
 }
 
 
@@ -21,14 +22,14 @@ export const SocialIconLinks = (props: SocialIconLinksPropsType) => {
     )
   })
   return (
-    <StyledSocialIconLinks>
+    <StyledSocialIconLinks isHeader={props.isHeader}>
       {socialIconsElements}
     </StyledSocialIconLinks>
   )
 }
 
 
-const StyledSocialIconLinks = styled.ul`
+const StyledSocialIconLinks = styled.ul<{isHeader: boolean | undefined}>`
     display: flex;
     gap: 20px;
     
@@ -38,7 +39,11 @@ const StyledSocialIconLinks = styled.ul`
         max-width: 35px;
         max-height: 35px;
     }
-`
+    ${props => props.isHeader && css<{isHeader: boolean | undefined}>`
+        @media ${theme.media.large} {
+            display: none;
+        }
+    `}`
 
 const StyledLink = styled.a`
     background-color: rgba(255, 255, 255, 0.1);

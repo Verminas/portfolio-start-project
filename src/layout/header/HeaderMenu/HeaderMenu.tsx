@@ -25,13 +25,19 @@ export const HeaderMenu = (props: HeaderMenuPropsType) => {
     )
   })
   return (
-    <nav>
+    <HeaderNavigation>
       <StyledHeaderMenuList>
         {menuItemsElements}
       </StyledHeaderMenuList>
-    </nav>
+    </HeaderNavigation>
   )
 }
+
+const HeaderNavigation = styled.nav`
+    @media ${theme.media.tablet} {
+        display: none;
+    }
+`
 
 
 const HeaderLink = styled.a`
@@ -48,7 +54,6 @@ const StyledHeaderMenuList = styled.ul`
     display: flex;
     gap: 30px;
     justify-content: center;
-    
 `
 
 const Mask = styled.span`

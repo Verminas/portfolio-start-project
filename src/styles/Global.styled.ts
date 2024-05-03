@@ -14,6 +14,13 @@ export const GlobalStyle = createGlobalStyle`
         &:focus-visible{
             outline: 2px solid ${theme.colors.accent};
         }
+        &::selection{
+            background-color: ${theme.colors.accent};
+            color: ${theme.colors.font};
+        }
+    }
+    html{
+        overflow-x: hidden;
     }
 
     body {

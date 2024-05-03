@@ -1,6 +1,5 @@
 import React from 'react';
 import {Logo} from "../../components/Logo/Logo";
-import {TabMenu} from "../sections/works/TabMenu/TabMenu";
 import {SocialIconLinks} from "../../components/SocialIconLinks/SocialIconLinks";
 import styled from "styled-components";
 import {FlexBoxWrapper} from "../../components/FlexBoxWrapper";
@@ -9,6 +8,7 @@ import {menuNavigationItems} from "../../index";
 import {Container} from "../../components/Container";
 import {theme} from "../../styles/Theme";
 import {HeaderMenu} from "./HeaderMenu/HeaderMenu";
+import {MobileMenu} from "./MobileMenu/MobileMenu";
 
 export const Header = () => {
   return (
@@ -18,7 +18,8 @@ export const Header = () => {
           <Logo/>
           <FlexBoxWrapper align={'center'} justify={"flex-end"}>
             <HeaderMenu itemsNames={menuNavigationItems}/>
-            <SocialIconLinks socialIconsId={socialIconsId}/>
+            <SocialIconLinks socialIconsId={socialIconsId} isHeader={true}/>
+            <MobileMenu itemsNames={menuNavigationItems}/>
           </FlexBoxWrapper>
         </FlexBoxWrapper>
       </Container>
