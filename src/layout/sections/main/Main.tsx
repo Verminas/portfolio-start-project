@@ -9,9 +9,9 @@ import {font} from "../../../styles/Common";
 
 export const Main = () => {
   return (
-    <SectionWrapper id={'home'} height={'100vh'}>
+    <SectionWrapperMedia id={'home'} height={'100vh'}>
       <Container>
-        <FlexBoxWrapper justify="space-around" align="center" gap={"0"} wrap={"wrap"}>
+        <FlexBoxWrapperMedia justify="space-around" align="center" gap={"0"} wrap={"wrap"}>
           <FlexBoxWrapper direction={'column'} gap={'0'} width={'fit-content'}>
             <SmallText>Hi There</SmallText>
             <Name>I am <span>Svetlana Dyablo</span></Name>
@@ -20,11 +20,25 @@ export const Main = () => {
           <PhotoWrapper>
             <Photo src={imgProfile} alt="profile photo"></Photo>
           </PhotoWrapper>
-        </FlexBoxWrapper>
+        </FlexBoxWrapperMedia>
       </Container>
-    </SectionWrapper>
+    </SectionWrapperMedia>
 );
 };
+
+const FlexBoxWrapperMedia = styled(FlexBoxWrapper)`
+    @media ${theme.media.tablet} {
+        align-content: center;
+    }
+    @media ${theme.media.mobile} {
+      align-content: flex-start;
+  }
+`
+const SectionWrapperMedia = styled(SectionWrapper)`
+    @media ${theme.media.tablet} {
+        height: fit-content;
+    }
+`
 
 const PhotoWrapper =styled.div`
     position: relative;
@@ -48,6 +62,10 @@ const PhotoWrapper =styled.div`
             top: -20px;
             left: 17px;
         }
+    }
+
+    @media ${theme.media.tablet} {
+        margin-top: 65px;
     }
 `
 
