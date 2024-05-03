@@ -22,15 +22,19 @@ export const Skill = (props: SkillPropsType) => {
 }
 
 const WrapperSkill = styled.div`
-    width: 380px;
-    //width: 30%;
-    padding: 30px 20px 40px 20px;
+    width: 330px;
+    flex-grow: 1;
+    padding: 62px 20px 40px;
     display: flex;
     flex-direction: column;
     justify-content: stretch;
     align-items: center;
     text-align: center;
     flex-wrap: wrap;
+
+    @media ${theme.media.mobile} {
+        padding: 62px 0 40px;
+    }
 `
 const TitleSkill = styled.h3`
     text-transform: uppercase;
