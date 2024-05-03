@@ -31,12 +31,14 @@ export const WorkItem = (props: WorkItemPropsType) => {
 }
 
 const WrapperWorkItem = styled.div`
-    width: 330px;
+    min-width: 310px;
+    max-width: 540px;
+    //width: 100%;
     display: flex;
     flex-grow: 1;
     flex-direction: column;
     align-items: stretch;
-    justify-content: space-between;
+    justify-content: flex-start;
     background-color: ${theme.colors.secondaryBg};
     
     & a {
@@ -44,9 +46,6 @@ const WrapperWorkItem = styled.div`
         padding: 10px 0;
     }
     
-    @media ${theme.media.desktop} {
-        max-width: 540px;
-    }
 `
 const WrapperImage = styled.div`
     img {
