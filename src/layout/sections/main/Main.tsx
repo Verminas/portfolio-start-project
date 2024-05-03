@@ -5,13 +5,14 @@ import imgProfile from "../../../assets/images/profile-photo.webp";
 import styled from "styled-components";
 import {Container} from "../../../components/Container";
 import {theme} from "../../../styles/Theme";
+import {font} from "../../../styles/Common";
 
 export const Main = () => {
   return (
     <SectionWrapper id={'home'} height={'100vh'}>
       <Container>
-        <FlexBoxWrapper justify="space-between" align="center" gap={"20px"}>
-          <FlexBoxWrapper direction={'column'} gap={'10px'} width={'fit-content'}>
+        <FlexBoxWrapper justify="space-around" align="center" gap={"0"} wrap={"wrap"}>
+          <FlexBoxWrapper direction={'column'} gap={'0'} width={'fit-content'}>
             <SmallText>Hi There</SmallText>
             <Name>I am <span>Svetlana Dyablo</span></Name>
             <Title>A Wev Developer.</Title>
@@ -39,7 +40,14 @@ const PhotoWrapper =styled.div`
         top: -25px;
         left: 25px;
         z-index: -1;
+        
 
+        @media ${theme.media.mobile} {
+            width: 314px;
+            height: 414px;
+            top: -20px;
+            left: 17px;
+        }
     }
 `
 
@@ -49,6 +57,12 @@ const Photo = styled.img`
     height: 430px;
     object-fit: cover;
     position: relative;
+    margin-right: 20px;
+    
+    @media ${theme.media.mobile} {
+        width: 310px;
+        height: 380px;
+    }
     
 `
 
@@ -58,11 +72,11 @@ const SmallText = styled.span`
 `
 
 const Name = styled.h2`
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 50px;
-    font-weight: 700;
+    
+    ${font({family: "'Josefin Sans', sans-serif", weight: 700, Fmin: 36, Fmax: 50})}
     letter-spacing: 0.05em;
     text-align: left;
+    margin: 10px 0;
     
     span{
         white-space: nowrap;
@@ -82,12 +96,15 @@ const Name = styled.h2`
         }
     }
 
+    @media ${theme.media.mobile} {
+        margin: 15px 0 22px;
+    }
 `
 
 const Title = styled.h1`
     font-size: 27px;
     text-align: left;
-
+    ${font({Fmin: 20, Fmax: 27})}
 `
 
 

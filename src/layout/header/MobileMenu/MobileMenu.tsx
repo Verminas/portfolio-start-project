@@ -26,10 +26,10 @@ export const MobileMenu = (props: HeaderMenuPropsType) => {
   })
   return (
     <MobileNavigation>
-      <BurgerButton isOpen={true}>
+      <BurgerButton isOpen={false}>
         <span></span>
       </BurgerButton>
-      <MobileMenuPopup isOpen={true}>
+      <MobileMenuPopup isOpen={false}>
         <StyledMobileMenuList>
           {menuItemsElements}
         </StyledMobileMenuList>

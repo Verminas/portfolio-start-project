@@ -9,17 +9,21 @@ export const GlobalStyle = createGlobalStyle`
         color: inherit;
         border: none;
     }
-    *{
+
+    * {
         scroll-behavior: smooth;
-        &:focus-visible{
+
+        &:focus-visible {
             outline: 2px solid ${theme.colors.accent};
         }
-        &::selection{
+
+        &::selection {
             background-color: ${theme.colors.accent};
             color: ${theme.colors.font};
         }
     }
-    html{
+
+    html {
         overflow-x: hidden;
     }
 
@@ -35,13 +39,15 @@ export const GlobalStyle = createGlobalStyle`
         line-height: 1.2;
     }
 
-    a{
+    a {
         text-decoration: none;
     }
-    ul{
+
+    ul {
         list-style: none;
     }
-    button{
+
+    button {
         background-color: unset;
         border: none;
         font-family: inherit;
@@ -59,8 +65,18 @@ export const GlobalStyle = createGlobalStyle`
         position: relative;
 
     }
-    section{
+
+    section {
         padding: 100px 0;
+
+        & {
+            @media ${theme.media.mobile} {
+                padding: 0;
+            }
+        }
+    }
+    section[id="home"] {
+        padding: 0;
     }
 
     section:nth-child(2n) {
@@ -76,14 +92,15 @@ export const GlobalStyle = createGlobalStyle`
         max-height: 50px;
         fill: ${theme.colors.accent};
     }
-    h3{
+
+    h3 {
         font-family: 'Josefin Sans', sans-serif;
         font-size: 16px;
         font-weight: 700;
         letter-spacing: 1px;
     }
-    
-    p{
+
+    p {
         font-size: 14px;
         font-weight: 400;
         line-height: 1.4;
