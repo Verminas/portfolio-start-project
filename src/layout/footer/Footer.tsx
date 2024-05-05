@@ -11,7 +11,7 @@ export const Footer = () => {
   return (
     <StyledFooter>
       <Container>
-        <FlexBoxWrapper direction="column" gap="30px" align="center" justify="center">
+        <FlexBoxWrapper direction="column" gap="25px" align="center" justify="center">
           <Title>Svetlana</Title>
           <SocialIconLinks socialIconsId={socialIconsId}/>
           <Copyright>&copy; 2023 Svetlana Dyablo, All Rights Reserved.</Copyright>
