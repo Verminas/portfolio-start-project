@@ -4,16 +4,30 @@ import {SectionTitle} from "../../../components/SectionTitle/SectionTitle";
 import {Form} from "../../../components/Form/Form";
 import {Container} from "../../../components/Container";
 import {FlexBoxWrapper} from "../../../components/FlexBoxWrapper";
+import styled from "styled-components";
+import {theme} from "../../../styles/Theme";
 
 export const Contact = () => {
   return (
     <SectionWrapper id={'contact'}>
       <Container>
-        <FlexBoxWrapper direction={'column'} align={"center"} justify={'space-between'} gap={"0"}>
+        <FlexBoxWrapperMedia direction={'column'} align={"center"} justify={'space-between'} gap={"0"}>
           <SectionTitle>Contact</SectionTitle>
           <Form/>
-        </FlexBoxWrapper>
+        </FlexBoxWrapperMedia>
       </Container>
     </SectionWrapper>
   );
 };
+
+const FlexBoxWrapperMedia = styled(FlexBoxWrapper)`
+    @media ${theme.media.desktop} {
+        h2{
+            margin-top: -15px;
+        }
+        form {
+            margin-top: 8px;
+            margin-left: 10px;
+        }
+    }
+`
