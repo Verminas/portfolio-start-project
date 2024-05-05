@@ -26,8 +26,8 @@ export const SectionTitle = styled.h2`
             bottom: -24px;
         }
     }
-    // @media ${theme.media.mobile} {
-    //     margin-bottom: 50px;
-    // }
+    @media ${theme.media.mobile} {
+        margin-bottom: 75px;
+    }
 
 `

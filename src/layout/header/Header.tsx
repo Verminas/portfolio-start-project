@@ -30,9 +30,13 @@ export const Header = () => {
 const StyledHeader = styled.header`
     background-color: ${theme.colors.primaryBg};
     padding: 20px 0;
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 999;
+    
+    @media ${theme.media.mobile} {
+        padding: 24px 0;    
+    }
 `

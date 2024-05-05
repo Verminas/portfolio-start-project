@@ -11,7 +11,7 @@ export const Testimony = () => {
   return (
     <SectionWrapper id={'testimony'}>
       <Container>
-        <FlexBoxWrapper direction={'column'} align={'center'}>
+        <FlexBoxWrapper direction={'column'} align={'center'} gap={"30px"}>
           <SectionTitle>Testimony</SectionTitle>
           <WrapperIcon>
             <Icon iconId={"quoteSvg"}/>

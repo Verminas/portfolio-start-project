@@ -9,7 +9,7 @@ export const Contact = () => {
   return (
     <SectionWrapper id={'contact'}>
       <Container>
-        <FlexBoxWrapper direction={'column'} align={"center"} justify={'space-between'} gap={"40px"}>
+        <FlexBoxWrapper direction={'column'} align={"center"} justify={'space-between'} gap={"0"}>
           <SectionTitle>Contact</SectionTitle>
           <Form/>
         </FlexBoxWrapper>

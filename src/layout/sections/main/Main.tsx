@@ -15,7 +15,7 @@ export const Main = () => {
           <FlexBoxWrapper direction={'column'} gap={'0'} width={'fit-content'}>
             <SmallText>Hi There</SmallText>
             <Name>I am <span>Svetlana Dyablo</span></Name>
-            <Title>A Wev Developer.</Title>
+            <Title>A Web Developer.</Title>
           </FlexBoxWrapper>
           <PhotoWrapper>
             <Photo src={imgProfile} alt="profile photo"></Photo>
@@ -27,6 +27,9 @@ export const Main = () => {
 };
 
 const FlexBoxWrapperMedia = styled(FlexBoxWrapper)`
+    @media ${theme.media.desktop} {
+        justify-content: space-between;
+    }
     @media ${theme.media.tablet} {
         align-content: center;
     }
@@ -76,6 +79,10 @@ const Photo = styled.img`
     object-fit: cover;
     position: relative;
     margin-right: 20px;
+
+    @media ${theme.media.desktop} {
+        margin-right: 0;
+    }
     
     @media ${theme.media.mobile} {
         width: 310px;

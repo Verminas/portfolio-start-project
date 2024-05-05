@@ -76,9 +76,17 @@ export const GlobalStyle = createGlobalStyle`
         }
     }
 
-    section[id="home"] {
-        padding: 0;
-    }
+    // section[id="home"] {
+    //     padding: 0;
+    //    
+    //     @media ${theme.media.mobile} {
+    //         padding: 0 0 80px;
+    //     }
+    // }
+    //
+    // section[id="skills"] h2{
+    //     margin-bottom: 50px;
+    // }
 
     section:nth-child(2n) {
         background-color: ${theme.colors.primaryBg};

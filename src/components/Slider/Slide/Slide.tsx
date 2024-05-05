@@ -24,7 +24,7 @@ const StyledSlide = styled.div`
     text-align: center;
 `
 const SlideText = styled.p`
-    margin: 40px 0 15px;
+    margin: 40px 0 24px;
 `
 const SlideName = styled.span`
     text-transform: uppercase;

@@ -48,7 +48,7 @@ const MobileNavigation = styled.nav`
 
 const BurgerButton = styled.button<{isOpen: boolean}>`
     position: fixed;
-    top: -100px;
+    top: -108px;
     right: -100px;
     width: 200px;
     height: 200px;
@@ -87,6 +87,7 @@ const BurgerButton = styled.button<{isOpen: boolean}>`
             height: 2px;
             background-color: ${theme.colors.font};
             position: absolute;
+            right: 0;
             transform: translateY(10px);
 
             ${props => props.isOpen && css`

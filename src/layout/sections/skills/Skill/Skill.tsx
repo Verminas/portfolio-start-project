@@ -24,7 +24,7 @@ export const Skill = (props: SkillPropsType) => {
 const WrapperSkill = styled.div`
     width: 330px;
     flex-grow: 1;
-    padding: 62px 20px 40px;
+    padding: 45px 20px 58px;
     display: flex;
     flex-direction: column;
     justify-content: stretch;
