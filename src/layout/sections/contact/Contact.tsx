@@ -30,4 +30,8 @@ const FlexBoxWrapperMedia = styled(FlexBoxWrapper)`
             margin-left: 10px;
         }
     }
+
+    @media ${theme.media.mobile} {
+        gap: 28px;
+    }
 `
