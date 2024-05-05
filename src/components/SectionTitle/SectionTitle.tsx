@@ -31,7 +31,7 @@ export const SectionTitle = styled.h2`
         padding-left: 25px;
     }
     @media ${theme.media.mobile} {
-        margin-bottom: 75px;
+        margin-bottom: 45px;
     }
 
 `

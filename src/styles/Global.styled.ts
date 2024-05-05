@@ -76,13 +76,12 @@ export const GlobalStyle = createGlobalStyle`
         }
     }
 
-    // section[id="home"] {
-    //     padding: 0;
-    //    
-    //     @media ${theme.media.mobile} {
-    //         padding: 0 0 80px;
-    //     }
-    // }
+    section[id="home"] {
+
+        @media ${theme.media.mobile} {
+            padding: 100px 0 80px;
+        }
+    }
     //
     // section[id="skills"] h2{
     //     margin-bottom: 50px;

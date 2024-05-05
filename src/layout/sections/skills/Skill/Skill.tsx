@@ -33,7 +33,7 @@ const WrapperSkill = styled.div`
     flex-wrap: wrap;
 
     @media ${theme.media.mobile} {
-        padding: 62px 0 40px;
+        padding: 55px 0 50px;
     }
 `
 const TitleSkill = styled.h3`
