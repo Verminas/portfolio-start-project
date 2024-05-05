@@ -5,6 +5,8 @@ import {TabMenu} from "./TabMenu/TabMenu";
 import {FlexBoxWrapper} from "../../../components/FlexBoxWrapper";
 import {WorkItem} from "./WorkItem/WorkItem";
 import {Container} from "../../../components/Container";
+import styled from "styled-components";
+import {theme} from "../../../styles/Theme";
 
 type WorksPropsType = {
   worksInfo: {
@@ -30,12 +32,18 @@ export const Works = (props: WorksPropsType) => {
         <FlexBoxWrapper direction={'column'} gap={'0'} align={'center'} wrap={'wrap'}>
           <SectionTitle>My Works</SectionTitle>
           <TabMenu itemsNames={props.worksInfo.itemsNames}/>
-          <FlexBoxWrapper justify={'space-around'} wrap={'wrap'} align={'stretch'} gap={"30px"}>
+          <FlexBoxWrapperMedia justify={'space-around'} wrap={'wrap'} align={'stretch'} gap={"30px"}>
             {workItemsElements}
-          </FlexBoxWrapper>
+          </FlexBoxWrapperMedia>
         </FlexBoxWrapper>
       </Container>
     </SectionWrapper>
   );
 };
+
+const FlexBoxWrapperMedia = styled(FlexBoxWrapper)`
+    @media ${theme.media.desktop} {
+      gap: 60px;
+    }
+`
 

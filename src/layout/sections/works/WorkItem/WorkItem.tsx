@@ -106,7 +106,7 @@ const WrapperImage = styled.div`
 `
 
 const WrapperInfo = styled.div`
-    padding: 25px 20px;
+    padding: 25px 25px;
     display: flex;
     flex-direction: column;
 `
