@@ -48,8 +48,8 @@ const MobileNavigation = styled.nav`
 
 const BurgerButton = styled.button<{isOpen: boolean}>`
     position: fixed;
-    top: -108px;
-    right: -100px;
+    top: -112px;
+    right: -105px;
     width: 200px;
     height: 200px;
     z-index: 100;
@@ -117,19 +117,18 @@ const MobileMenuPopup = styled.div<{isOpen: boolean}>`
 
 const HeaderLink = styled.a`
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 30px;
+    font-size: 36px;
     font-weight: 400;
     line-height: 55px;
     text-align: center;
     color: transparent;
-
 `
 
 const StyledMobileMenuList = styled.ul`
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    //gap: 20px;
     justify-content: center;
     align-items: center;
     
