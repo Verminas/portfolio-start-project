@@ -30,4 +30,8 @@ const StyledMenuList = styled.ul`
     margin: 5px auto 40px;
     max-width: 352px;
     width: 100%;
+  
+    @media ${theme.media.mobile} {
+      margin: 35px auto 45px;
+    }
 `

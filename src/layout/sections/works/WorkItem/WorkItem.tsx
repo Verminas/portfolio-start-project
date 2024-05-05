@@ -109,6 +109,10 @@ const WrapperInfo = styled.div`
     padding: 25px 25px;
     display: flex;
     flex-direction: column;
+    
+    @media ${theme.media.mobile} {
+        padding: 20px 20px;
+    }
 `
 const Title = styled.h3`
     text-transform: capitalize;

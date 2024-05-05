@@ -82,6 +82,16 @@ export const GlobalStyle = createGlobalStyle`
             padding: 100px 0 80px;
         }
     }
+    section[id="works"]{
+
+        @media ${theme.media.mobile} {
+            h2 {
+                margin-top: -15px;
+            }
+            
+        }
+    }
+    
     //
     // section[id="skills"] h2{
     //     margin-bottom: 50px;
