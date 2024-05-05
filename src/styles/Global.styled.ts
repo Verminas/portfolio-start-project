@@ -91,6 +91,18 @@ export const GlobalStyle = createGlobalStyle`
             
         }
     }
+
+    section[id="slogan"]{
+
+        @media ${theme.media.mobile} {
+            h2 {
+                line-height: 0.93;
+            }
+            div {
+                gap: 37px;
+            }
+        }
+    }
     
     //
     // section[id="skills"] h2{

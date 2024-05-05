@@ -37,4 +37,8 @@ const Copyright = styled.span`
     text-align: center;
     color: ${theme.colors.font};
     opacity: 50%;
+    
+    @media ${theme.media.mobile} {
+        margin-top: 10px;
+    }
 `
