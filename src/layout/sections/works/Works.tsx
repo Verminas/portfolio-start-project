@@ -30,7 +30,7 @@ export const Works: React.FC<WorksPropsType> = (props: WorksPropsType) => {
       <Container>
         <FlexBoxWrapper direction={'column'} gap={'0'} align={'center'} wrap={'wrap'}>
           <SectionTitle>My Works</SectionTitle>
-          <TabMenu itemsNames={props.worksInfo.tabItems}/>
+          <TabMenu tabItems={props.worksInfo.tabItems}/>
           <S.FlexBoxWrapperMedia justify={'space-around'} wrap={'wrap'} align={'stretch'} gap={"30px"}>
             {workItemsElements}
           </S.FlexBoxWrapperMedia>
