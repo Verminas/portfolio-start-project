@@ -10,7 +10,7 @@ const FlexBoxWrapperMedia = styled(FlexBoxWrapper)`
 
 // WorkItem
 const WrapperWorkItem = styled.div`
-    min-width: 310px;
+    width: 310px;
     max-width: 540px;
     //width: 100%;
     display: flex;
