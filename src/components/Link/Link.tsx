@@ -7,7 +7,7 @@ type LinkPropsType = {
   children?: string,
 }
 
-export const Link = (props: LinkPropsType) => {
+export const Link: React.FC<LinkPropsType> = (props: LinkPropsType) => {
   return (
     <StyledLink href={props.href}>{props.children}</StyledLink>
   );

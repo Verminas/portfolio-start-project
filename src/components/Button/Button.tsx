@@ -1,12 +1,13 @@
 import styled from "styled-components";
 import {theme} from "../../styles/Theme";
+import React from "react";
 
 type ButtonPropsType = {
   name: string,
   type?: string,
 }
 
-export const Button = (props: ButtonPropsType) => {
+export const Button: React.FC<ButtonPropsType> = (props: ButtonPropsType) => {
   return (
     <StyledButton>{props.name}</StyledButton>
   )

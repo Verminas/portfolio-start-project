@@ -11,7 +11,7 @@ type SocialIconLinksPropsType = {
 
 
 
-export const SocialIconLinks = (props: SocialIconLinksPropsType) => {
+export const SocialIconLinks: React.FC<SocialIconLinksPropsType> = (props: SocialIconLinksPropsType) => {
   const socialIconsElements = props.socialIconsId.map((socialIconId) => {
     return (
       <li>

@@ -3,7 +3,7 @@ import styled from "styled-components";
 import {Button} from "../Button/Button";
 import {theme} from "../../styles/Theme";
 
-export const Form = () => {
+export const Form: React.FC = () => {
   return (
     <StyledForm action={"#"} method={"post"}>
       <Field placeholder={'Name'}/>
