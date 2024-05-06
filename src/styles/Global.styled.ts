@@ -22,6 +22,26 @@ export const GlobalStyle = createGlobalStyle`
             color: ${theme.colors.font};
         }
     }
+    
+    // style for scrollbar
+    
+    *::-webkit-scrollbar{
+        width: 15px;
+    }
+    *::-webkit-scrollbar-track{
+        background-color: ${theme.colors.primaryBg};
+        box-shadow: 0 0 10px ${theme.colors.secondaryBg} inset;
+    }
+    *::-webkit-scrollbar-thumb{
+        background-color: ${theme.colors.accent};
+        border-radius: 50px;
+        box-shadow: 0 0 30px ${theme.colors.primaryBg} inset;
+        border: 2px solid ${theme.colors.primaryBg};
+    }
+    * {
+        scrollbar-width: auto;
+        scrollbar-color: ${theme.colors.accent} ${theme.colors.primaryBg};
+    }
 
     html {
         overflow-x: hidden;
@@ -107,11 +127,6 @@ export const GlobalStyle = createGlobalStyle`
             }
         }
     }
-    
-    //
-    // section[id="skills"] h2{
-    //     margin-bottom: 50px;
-    // }
 
     section:nth-child(2n) {
         background-color: ${theme.colors.primaryBg};
