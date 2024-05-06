@@ -1,42 +1,40 @@
 import React from 'react';
 import {Logo} from "../../components/Logo/Logo";
 import {SocialIconLinks} from "../../components/SocialIconLinks/SocialIconLinks";
-import styled from "styled-components";
 import {FlexBoxWrapper} from "../../components/FlexBoxWrapper";
-import {socialIconsId} from "../../index";
-import {menuNavigationItems} from "../../index";
+import {menuNavigationItems, socialIconsId} from "../../index";
 import {Container} from "../../components/Container";
-import {theme} from "../../styles/Theme";
-import {HeaderMenu} from "./HeaderMenu/HeaderMenu";
-import {MobileMenu} from "./MobileMenu/MobileMenu";
+import {DesktopMenu} from "./HeaderMenu/DesktopMenu/DesktopMenu";
+import {MobileMenu} from "./HeaderMenu/MobileMenu/MobileMenu";
+import {S} from "./Header_Styles";
 
-export const Header = () => {
+export const Header: React.FC = () => {
+  const [width, setWidth] = React.useState(window.innerWidth);
+  const breakpoint = 768;
+
+  React.useEffect(() => {
+    const handleWindowResize = () => setWidth(window.innerWidth);
+    window.addEventListener("resize", handleWindowResize);
+
+    return () => window.removeEventListener("resize", handleWindowResize);
+  }, []);
+
   return (
-    <StyledHeader>
+    <S.Header>
       <Container>
         <FlexBoxWrapper justify="space-between" align="center">
           <Logo/>
           <FlexBoxWrapper align={'center'} justify={"flex-end"}>
-            <HeaderMenu itemsNames={menuNavigationItems}/>
+
+            {width > breakpoint ?
+              <DesktopMenu menuItems={menuNavigationItems}/>
+              : <MobileMenu menuItems={menuNavigationItems}/>
+            }
+
             <SocialIconLinks socialIconsId={socialIconsId} isHeader={true}/>
-            <MobileMenu itemsNames={menuNavigationItems}/>
           </FlexBoxWrapper>
         </FlexBoxWrapper>
       </Container>
-    </StyledHeader>
+    </S.Header>
   );
 };
-
-const StyledHeader = styled.header`
-    background-color: ${theme.colors.primaryBg};
-    padding: 20px 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 999;
-    
-    @media ${theme.media.mobile} {
-        padding: 24px 0;    
-    }
-`
