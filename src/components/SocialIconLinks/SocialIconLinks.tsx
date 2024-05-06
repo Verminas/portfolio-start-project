@@ -12,17 +12,17 @@ type SocialIconLinksPropsType = {
 
 
 export const SocialIconLinks: React.FC<SocialIconLinksPropsType> = (props: SocialIconLinksPropsType) => {
-  const socialIconsElements = props.socialIconsId.map((socialIconId) => {
+  const socialIconsElements = props.socialIconsId.map((socialIconId, index) => {
     return (
-      <li>
-        <StyledLink href="#">
+      <li key={index}>
+        <StyledLink href="#" aria-label={"link to social network"}>
           <Icon iconId={socialIconId} width={'50'} height={'50'} viewBox={'0 0 20 20'}></Icon>
         </StyledLink>
       </li>
     )
   })
   return (
-    <StyledSocialIconLinks isHeader={props.isHeader}>
+    <StyledSocialIconLinks isHeader={props.isHeader} aria-label={'social networks list'}>
       {socialIconsElements}
     </StyledSocialIconLinks>
   )

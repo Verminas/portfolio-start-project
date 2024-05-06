@@ -11,7 +11,7 @@ type MenuPropsType = {
 export const MobileMenu: React.FC<MenuPropsType> = (props: MenuPropsType) => {
   return (
     <nav>
-      <S.BurgerButton isOpen={false}>
+      <S.BurgerButton isOpen={false} aria-label={"menu button"} aria-haspopup={true}>
         <span></span>
       </S.BurgerButton>
       <S.MobileMenuPopup isOpen={false}>

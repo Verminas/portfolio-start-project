@@ -9,15 +9,15 @@ type TabMenuPropsType = {
 
 
 export const TabMenu = (props: TabMenuPropsType) => {
-  const tabMenuItemsElements = props.tabItems.map((tabItem) => {
+  const tabMenuItemsElements = props.tabItems.map((tabItem, index) => {
     return (
-      <li>
+      <li role={"tab"} key={index}>
         <Link href={`#${tabItem.toLowerCase()}`}>{tabItem}</Link>
       </li>
     )
   })
   return (
-      <S.TabMenuList>
+      <S.TabMenuList role={"tablist"}>
         {tabMenuItemsElements}
       </S.TabMenuList>
   )

@@ -7,14 +7,14 @@ type MenuPropsType = {
 }
 
 export const Menu: React.FC<MenuPropsType> = (props: MenuPropsType) => {
-  const menuItemsElements = props.menuItems.map((menuItem) => {
+  const menuItemsElements = props.menuItems.map((menuItem, index) => {
     return (
-      <S.MenuItem>
+      <S.MenuItem role={"menuitem"} key={index}>
         <S.Link href={`#${menuItem.toLowerCase()}`}>{menuItem}
-          <S.Mask>
+          <S.Mask aria-hidden={true}>
             <span>{menuItem}</span>
           </S.Mask>
-          <S.Mask>
+          <S.Mask aria-hidden={true}>
             <span>{menuItem}</span>
           </S.Mask>
 
@@ -23,7 +23,7 @@ export const Menu: React.FC<MenuPropsType> = (props: MenuPropsType) => {
     )
   })
   return (
-    <S.MenuList>
+    <S.MenuList role={'menu'}>
       {menuItemsElements}
     </S.MenuList>
   );

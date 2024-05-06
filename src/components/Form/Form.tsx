@@ -6,9 +6,9 @@ import {theme} from "../../styles/Theme";
 export const Form: React.FC = () => {
   return (
     <StyledForm action={"#"} method={"post"}>
-      <Field placeholder={'Name'}/>
-      <Field type={"email"} placeholder={'E-mail'} required={true}/>
-      <Field as={'textarea'} placeholder={'Type something...'}/>
+      <Field placeholder={'Name'} name={'name'} autoComplete={"on"}/>
+      <Field type={"email"} placeholder={'E-mail'} required={true} name={'email'} autoComplete={"on"}/>
+      <Field as={'textarea'} placeholder={'Type something...'} name={'type'} autoComplete={"on"}/>
       <Button name={'send message'} type={'submit'}></Button>
     </StyledForm>
   );
@@ -48,5 +48,11 @@ const Field = styled.input`
     &::placeholder{
         color: ${theme.colors.placeholder};
         text-transform: capitalize;
+    }
+
+    &:-webkit-autofill{
+        -webkit-box-shadow:0 0 0 1000px ${theme.colors.secondaryBg} inset; 
+        -webkit-text-fill-color: ${theme.colors.font};
+        border: 1px solid ${theme.colors.border};
     }
 `

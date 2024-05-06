@@ -5,14 +5,14 @@ import {S} from "./Slider_Styles";
 
 export const Slider: React.FC = () => {
   return (
-    <S.Slider>
+    <S.Slider aria-label="slider">
       <FlexBoxWrapper>
         <Slide/>
       </FlexBoxWrapper>
       <S.Pagination>
-        <span></span>
-        <span className={"active"}></span>
-        <span></span>
+        <span role={"button"}></span>
+        <span className={"active"} role={"button"}></span>
+        <span role={"button"}></span>
       </S.Pagination>
     </S.Slider>
   )

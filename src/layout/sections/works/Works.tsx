@@ -19,9 +19,9 @@ type WorksPropsType = {
 }
 
 export const Works: React.FC<WorksPropsType> = (props: WorksPropsType) => {
-  const workItemsElements = props.worksInfo.projects.map(workItem => {
+  const workItemsElements = props.worksInfo.projects.map((workItem, index) => {
     return (
-      <WorkItem projImg={workItem.projImg} projTitle={workItem.projTitle} projText={workItem.projText} />
+      <WorkItem projImg={workItem.projImg} projTitle={workItem.projTitle} projText={workItem.projText} key={index}/>
     )
   })
 

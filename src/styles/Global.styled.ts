@@ -39,6 +39,10 @@ export const GlobalStyle = createGlobalStyle`
         line-height: 1.2;
         
         min-width: 360px;
+
+        @media (prefers-reduced-motion: reduce) {
+            animation: none;
+        }
     }
 
     a {
