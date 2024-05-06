@@ -5,9 +5,9 @@ import {Icon} from "../../../components/Icon/Icon";
 import {Slider} from "../../../components/Slider/Slider";
 import {Container} from "../../../components/Container";
 import {FlexBoxWrapper} from "../../../components/FlexBoxWrapper";
-import {WrapperIcon} from "../skills/Skill/Skill";
 import styled from "styled-components";
 import {theme} from "../../../styles/Theme";
+import {WrapperIcon} from "../../../components/WrapperIcon/WrapperIcon";
 
 export const Testimony = () => {
   return (

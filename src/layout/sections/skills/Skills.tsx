@@ -32,4 +32,3 @@ export const Skills = (props: SkillsPropsType) => {
   </SectionWrapper>
   );
 };
-
