@@ -5,12 +5,11 @@ import {TabMenu} from "./TabMenu/TabMenu";
 import {FlexBoxWrapper} from "../../../components/FlexBoxWrapper";
 import {WorkItem} from "./WorkItem/WorkItem";
 import {Container} from "../../../components/Container";
-import styled from "styled-components";
-import {theme} from "../../../styles/Theme";
+import {S} from "./Works_Styles";
 
 type WorksPropsType = {
   worksInfo: {
-    itemsNames: Array<string>,
+    tabItems: Array<string>,
     projects: {
       projImg: string,
       projTitle: string,
@@ -19,7 +18,7 @@ type WorksPropsType = {
   }
 }
 
-export const Works = (props: WorksPropsType) => {
+export const Works: React.FC<WorksPropsType> = (props: WorksPropsType) => {
   const workItemsElements = props.worksInfo.projects.map(workItem => {
     return (
       <WorkItem projImg={workItem.projImg} projTitle={workItem.projTitle} projText={workItem.projText} />
@@ -31,19 +30,12 @@ export const Works = (props: WorksPropsType) => {
       <Container>
         <FlexBoxWrapper direction={'column'} gap={'0'} align={'center'} wrap={'wrap'}>
           <SectionTitle>My Works</SectionTitle>
-          <TabMenu itemsNames={props.worksInfo.itemsNames}/>
-          <FlexBoxWrapperMedia justify={'space-around'} wrap={'wrap'} align={'stretch'} gap={"30px"}>
+          <TabMenu itemsNames={props.worksInfo.tabItems}/>
+          <S.FlexBoxWrapperMedia justify={'space-around'} wrap={'wrap'} align={'stretch'} gap={"30px"}>
             {workItemsElements}
-          </FlexBoxWrapperMedia>
+          </S.FlexBoxWrapperMedia>
         </FlexBoxWrapper>
       </Container>
     </SectionWrapper>
   );
 };
-
-const FlexBoxWrapperMedia = styled(FlexBoxWrapper)`
-    @media ${theme.media.desktop} {
-      gap: 60px;
-    }
-`
-

@@ -1,37 +1,24 @@
 import React from "react";
-import styled from "styled-components";
-import {theme} from "../../../../styles/Theme";
 import {Link} from "../../../../components/Link/Link";
+import {S} from "../Works_Styles";
 
 type TabMenuPropsType = {
-  itemsNames: Array<string>,
+  tabItems: Array<string>,
   itemsId?: Array<string>,
 }
 
 
 export const TabMenu = (props: TabMenuPropsType) => {
-  const menuItemsElements = props.itemsNames.map((menuItem) => {
+  const tabMenuItemsElements = props.tabItems.map((tabItem) => {
     return (
       <li>
-        <Link href={`#${menuItem.toLowerCase()}`}>{menuItem}</Link>
+        <Link href={`#${tabItem.toLowerCase()}`}>{tabItem}</Link>
       </li>
     )
   })
   return (
-      <StyledMenuList>
-        {menuItemsElements}
-      </StyledMenuList>
+      <S.TabMenuList>
+        {tabMenuItemsElements}
+      </S.TabMenuList>
   )
 }
-
-const StyledMenuList = styled.ul`
-    display: flex;
-    justify-content: space-between;
-    margin: 5px auto 40px;
-    max-width: 352px;
-    width: 100%;
-  
-    @media ${theme.media.mobile} {
-      margin: 35px auto 45px;
-    }
-`

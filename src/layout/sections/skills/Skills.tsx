@@ -13,7 +13,7 @@ type SkillsPropsType = {
   }[]
 }
 
-export const Skills = (props: SkillsPropsType) => {
+export const Skills: React.FC<SkillsPropsType> = (props: SkillsPropsType) => {
   const skillsElements = props.skillsInfo.map(skill => {
     return (
       <Skill iconId={skill.iconId} title={skill.title} text={skill.text} key={skill.iconId} />

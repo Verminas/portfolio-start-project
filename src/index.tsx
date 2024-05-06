@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-// import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 // src для картинок
@@ -43,7 +42,7 @@ export const skillsInfo = [
   },
 ];
 export const worksInfo = {
-  itemsNames: ['All', 'Landing Page', 'React', 'Spa'],
+  tabItems: ['All', 'Landing Page', 'React', 'Spa'],
   projects: [
     {
       projImg: imgWorkSrc1,
