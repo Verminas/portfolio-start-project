@@ -1,10 +1,15 @@
 import React from "react";
 import {Link} from "../../../../components/Link/Link";
 import {S} from "../Works_Styles";
+import {TabProjectsItemsType} from "../../../../index";
 
 type TabMenuPropsType = {
-  tabItems: Array<string>,
-  itemsId?: Array<string>,
+  tabItems: {
+    title: string,
+    type: TabProjectsItemsType,
+  }[],
+  changeFilterType: (value: TabProjectsItemsType) => void,
+  currentFilterType: string,
 }
 
 
@@ -12,7 +17,13 @@ export const TabMenu = (props: TabMenuPropsType) => {
   const tabMenuItemsElements = props.tabItems.map((tabItem, index) => {
     return (
       <li role={"tab"} key={index}>
-        <Link href={`#${tabItem.toLowerCase()}`}>{tabItem}</Link>
+        <Link
+          as={'button'}
+          onClick={() => {props.changeFilterType(tabItem.type)}}
+          active={props.currentFilterType === tabItem.type}
+        >
+          {tabItem.title}
+        </Link>
       </li>
     )
   })

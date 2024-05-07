@@ -7,6 +7,22 @@ import imgWorkSrc1 from './assets/images/work1.webp';
 import imgWorkSrc2 from './assets/images/work2.webp';
 import {GlobalStyle} from "./styles/Global.styled";
 
+export type TabProjectsItemsType = "all" | 'landing' | 'react' | 'spa';
+export type WorksInfoType = {
+  tabItems:
+    Array<{
+    title: string,
+    type: TabProjectsItemsType,
+  }>,
+  projects:
+    Array<{
+    projImg: string,
+      projTitle: string,
+      projText: string,
+      projType: TabProjectsItemsType,
+  }>
+}
+
 export const menuNavigationItems = ['Home', 'Skills', 'Works', 'Testimony', 'Contact'];
 export const socialIconsId = ['instSvg', 'telegramSvg', 'vkSvg', 'linkedinSvg'];
 export const skillsInfo = [
@@ -41,20 +57,39 @@ export const skillsInfo = [
     text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim',
   },
 ];
-export const worksInfo = {
-  tabItems: ['All', 'Landing Page', 'React', 'Spa'],
+export const worksInfo: WorksInfoType = {
+  tabItems: [
+    {
+      title: 'all',
+      type: 'all',
+    },
+    {
+      title: 'landing Page',
+      type: 'landing',
+    },
+    {
+      title: 'react',
+      type: 'react',
+    },
+    {
+      title: 'spa',
+      type: 'spa',
+    },
+  ],
   projects: [
     {
       projImg: imgWorkSrc1,
       projTitle: 'social network',
       projText: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ' +
         'ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+      projType: "spa"
     },
     {
       projImg: imgWorkSrc2,
       projTitle: 'timer',
       projText: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore " +
         "et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit  ut labore et dolore magna aliqua Ut enim",
+      projType: "react"
     },
   ]
 };

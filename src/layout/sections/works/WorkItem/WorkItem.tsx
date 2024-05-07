@@ -3,11 +3,13 @@ import React from "react";
 import {Link} from "../../../../components/Link/Link";
 import {Button} from "../../../../components/Button/Button";
 import {S} from "../Works_Styles";
+import {TabProjectsItemsType} from "../../../../index";
 
 type WorkItemPropsType = {
   projImg: string,
   projTitle: string,
   projText: string,
+  projType: TabProjectsItemsType,
 }
 
 export const WorkItem: React.FC<WorkItemPropsType> = (props: WorkItemPropsType) => {
@@ -21,7 +23,7 @@ export const WorkItem: React.FC<WorkItemPropsType> = (props: WorkItemPropsType) 
         <S.Title>{props.projTitle}</S.Title>
         <S.Text>{props.projText}</S.Text>
         <FlexBoxWrapper gap={'20px'}>
-          <Link href="#">Demo</Link>
+          <Link active href="#">Demo</Link>
           <Link href="#">Code</Link>
         </FlexBoxWrapper>
       </S.WrapperInfo>

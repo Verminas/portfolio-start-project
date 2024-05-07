@@ -1,19 +1,7 @@
-import React from 'react';
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 import {theme} from "../../styles/Theme";
 
-type LinkPropsType = {
-  href: string,
-  children?: string,
-}
-
-export const Link: React.FC<LinkPropsType> = (props: LinkPropsType) => {
-  return (
-    <StyledLink href={props.href}>{props.children}</StyledLink>
-  );
-};
-
-const StyledLink = styled.a`
+export const Link = styled.a<{active?: boolean}>`
     font-size: 14px;
     font-weight: 400;
     letter-spacing: 1px;
@@ -41,6 +29,10 @@ const StyledLink = styled.a`
         bottom: 5px;
         left: 0;
         z-index: -1;
+        
+        ${props => props.active && css<{active?: boolean}>`
+            height: 10px;
+        `}
     }
     
     @media ${theme.media.mobile} {
