@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import {Menu} from "../Menu/Menu";
 import {S} from "../HeaderMenu_Styles";
 
@@ -9,12 +9,14 @@ type MenuPropsType = {
 
 
 export const MobileMenu: React.FC<MenuPropsType> = (props: MenuPropsType) => {
+  const [menuIsOpen, setMenuIsOpen] = useState(false);
+  const onBurgerBtnClick = () => {setMenuIsOpen(!menuIsOpen)}
   return (
     <nav>
-      <S.BurgerButton isOpen={false} aria-label={"menu button"} aria-haspopup={true}>
+      <S.BurgerButton isOpen={menuIsOpen} aria-label={"menu button"} aria-haspopup={true} onClick={onBurgerBtnClick}>
         <span></span>
       </S.BurgerButton>
-      <S.MobileMenuPopup isOpen={false}>
+      <S.MobileMenuPopup isOpen={menuIsOpen} onClick={() => setMenuIsOpen(false)}>
         <Menu menuItems={props.menuItems}/>
       </S.MobileMenuPopup>
     </nav>
