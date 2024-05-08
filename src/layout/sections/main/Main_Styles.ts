@@ -107,7 +107,11 @@ const Name = styled.h2`
 const Title = styled.h1`
     font-size: 27px;
     text-align: left;
-    ${font({Fmin: 20, Fmax: 27})}
+    ${font({Fmin: 20, Fmax: 27})};
+    
+    p{
+        display: none;
+    }
 `
 
 export const S = {

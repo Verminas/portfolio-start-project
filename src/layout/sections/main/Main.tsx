@@ -3,6 +3,7 @@ import {FlexBoxWrapper} from "../../../components/FlexBoxWrapper";
 import imgProfile from "../../../assets/images/profile-photo.webp";
 import {Container} from "../../../components/Container";
 import {S} from "./Main_Styles";
+import Typewriter from 'typewriter-effect';
 
 export const Main: React.FC = () => {
   return (
@@ -12,7 +13,17 @@ export const Main: React.FC = () => {
           <FlexBoxWrapper direction={'column'} gap={'0'} width={'fit-content'}>
             <S.SmallText>Hi There</S.SmallText>
             <S.Name>I am <span>Svetlana Dyablo</span></S.Name>
-            <S.Title>A Web Developer.</S.Title>
+            <S.Title>
+              <p>A Web Developer, A Frontend Developer</p>
+              <Typewriter
+                options={{
+                  strings: ['A Web Developer.', 'A Frontend Developer.'],
+                  autoStart: true,
+                  loop: true,
+                }}
+              />
+            </S.Title>
+
           </FlexBoxWrapper>
           <S.PhotoWrapper>
             <S.Photo src={imgProfile} alt="profile photo"></S.Photo>
@@ -20,5 +31,5 @@ export const Main: React.FC = () => {
         </S.FlexBoxWrapperMedia>
       </Container>
     </S.SectionWrapperMedia>
-);
+  );
 };
