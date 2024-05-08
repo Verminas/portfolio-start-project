@@ -4,6 +4,8 @@ import imgProfile from "../../../assets/images/profile-photo.webp";
 import {Container} from "../../../components/Container";
 import {S} from "./Main_Styles";
 import Typewriter from 'typewriter-effect';
+import Tilt from "react-parallax-tilt"
+import {theme} from "../../../styles/Theme";
 
 export const Main: React.FC = () => {
   return (
@@ -25,9 +27,18 @@ export const Main: React.FC = () => {
             </S.Title>
 
           </FlexBoxWrapper>
-          <S.PhotoWrapper>
-            <S.Photo src={imgProfile} alt="profile photo"></S.Photo>
-          </S.PhotoWrapper>
+          <Tilt
+            className="background-stripes parallax-effect-glare-scale"
+            perspective={500}
+            glareEnable={true}
+            glareMaxOpacity={0.45}
+            scale={1.02}
+            glareColor={theme.colors.accent}
+          >
+            <S.PhotoWrapper>
+              <S.Photo src={imgProfile} alt="profile photo"></S.Photo>
+            </S.PhotoWrapper>
+          </Tilt>
         </S.FlexBoxWrapperMedia>
       </Container>
     </S.SectionWrapperMedia>
