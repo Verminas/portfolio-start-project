@@ -7,7 +7,7 @@ import {Testimony} from "./layout/sections/testimony/Testimony";
 import {Contact} from "./layout/sections/contact/Contact";
 import {Slogan} from "./layout/sections/slogan/Slogan";
 import {Footer} from "./layout/footer/Footer";
-import {skillsInfo, worksInfo} from "./index";
+import {skillsInfo, sliderInfo, worksInfo} from "./index";
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
       <Main/>
       <Skills skillsInfo={skillsInfo}/>
       <Works worksInfo={worksInfo}/>
-      <Testimony/>
+      <Testimony sliderInfo={sliderInfo}/>
       <Contact/>
       <Slogan/>
       <Footer/>

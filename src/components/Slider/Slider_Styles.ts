@@ -1,41 +1,33 @@
 import styled from "styled-components";
-import {theme} from "../../styles/Theme";
 
 const Slider = styled.div`
     max-width: 500px;
+    min-width: 330px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 35px;
-    
-`
-const Pagination = styled.div`
-    display: flex;
-    gap: 5px;
-
-    span {
-        width: 7px;
-        height: 7px;
-        border-radius: 20px;
-        background-color: rgba(255, 255, 255, 0.5);
-        
-        &.active {
-            width: 20px;
-            background-color: ${theme.colors.accent};
-        }
-    }
 `
 
 // Slide
 const Slide = styled.div`
+    width: 100%;
     display: flex;
     flex-direction: column;
-    //gap: 20px;
-    align-items: center;
+    align-items: stretch;
     text-align: center;
+    
+    &:hover{
+        cursor: grab;
+    }
+    &:active{
+        cursor: grabbing;
+    }
 `
 const Text = styled.p`
     margin: 40px 0 24px;
+    flex-grow: 1;
 `
 const Name = styled.span`
     text-transform: uppercase;
@@ -48,7 +40,6 @@ const Name = styled.span`
 
 export const S = {
   Slider,
-  Pagination,
   Slide,
   Text,
   Name,

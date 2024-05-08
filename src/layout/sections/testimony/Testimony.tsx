@@ -7,7 +7,13 @@ import {Container} from "../../../components/Container";
 import {WrapperIcon} from "../../../components/WrapperIcon/WrapperIcon";
 import {S} from "./Testimony_Styles";
 
-export const Testimony: React.FC = () => {
+type TestimonyPropsType = {
+  sliderInfo: {
+    slides: Array<{name: string, text: string}>,
+  }
+}
+
+export const Testimony: React.FC<TestimonyPropsType> = (props: TestimonyPropsType) => {
   return (
     <SectionWrapper id={'testimony'}>
       <Container>
@@ -16,7 +22,7 @@ export const Testimony: React.FC = () => {
           <WrapperIcon>
             <Icon iconId={"quoteSvg"}/>
           </WrapperIcon>
-          <Slider/>
+          <Slider sliderInfo={props.sliderInfo}/>
         </S.FlexBoxWrapperMedia>
       </Container>
     </SectionWrapper>
