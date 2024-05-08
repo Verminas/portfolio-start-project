@@ -5,6 +5,7 @@ import {font} from "../../styles/Common";
 const Footer = styled.footer`
     background-color: ${theme.colors.primaryBg};
     padding: 40px 0;
+    position: relative;
 `
 const Title = styled.h2`
     ${font({family: "'Josefin Sans', sans-serif", weight: 700, Fmin: 16, Fmax: 22})};

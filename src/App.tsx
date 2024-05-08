@@ -8,10 +8,13 @@ import {Contact} from "./layout/sections/contact/Contact";
 import {Slogan} from "./layout/sections/slogan/Slogan";
 import {Footer} from "./layout/footer/Footer";
 import {skillsInfo, sliderInfo, worksInfo} from "./index";
+import {Particle} from "./components/Particle/Particle";
+import React from "react";
 
 function App() {
   return (
     <div className="App">
+      <Particle/>
       <Header/>
       <Main/>
       <Skills skillsInfo={skillsInfo}/>

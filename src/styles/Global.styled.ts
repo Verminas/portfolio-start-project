@@ -93,6 +93,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     section {
+        position: relative;
         padding: 100px 0;
 
         @media ${theme.media.mobile} {
@@ -101,6 +102,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     section[id="home"] {
+        position: static;
 
         @media ${theme.media.mobile} {
             padding: 100px 0 80px;
@@ -117,6 +119,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     section[id="slogan"]{
+        position: static;
 
         @media ${theme.media.mobile} {
             h2 {
@@ -128,11 +131,11 @@ export const GlobalStyle = createGlobalStyle`
         }
     }
 
-    section:nth-child(2n) {
+    section:nth-child(2n + 1) {
         background-color: ${theme.colors.primaryBg};
     }
 
-    section:nth-child(2n + 1) {
+    section:nth-child(2n) {
         background: ${theme.colors.secondaryBg};
     }
 
