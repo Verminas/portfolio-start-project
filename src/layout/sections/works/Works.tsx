@@ -16,13 +16,13 @@ export const Works: React.FC<WorksPropsType> = (props: WorksPropsType) => {
   const [currentFilterType, setCurrentFilterType] = useState("all");
   let filteredWorks = props.worksInfo.projects;
 
-  if(currentFilterType === 'landing') {
+  if (currentFilterType === 'landing') {
     filteredWorks = props.worksInfo.projects.filter(work => work.projType === 'landing');
   }
-  if(currentFilterType === 'react') {
+  if (currentFilterType === 'react') {
     filteredWorks = props.worksInfo.projects.filter(work => work.projType === 'react');
   }
-  if(currentFilterType === 'spa') {
+  if (currentFilterType === 'spa') {
     filteredWorks = props.worksInfo.projects.filter(work => work.projType === 'spa');
   }
 
@@ -47,7 +47,8 @@ export const Works: React.FC<WorksPropsType> = (props: WorksPropsType) => {
       <Container>
         <FlexBoxWrapper direction={'column'} gap={'0'} align={'center'} wrap={'wrap'}>
           <SectionTitle>My Works</SectionTitle>
-          <TabMenu tabItems={props.worksInfo.tabItems} changeFilterType={changeFilterType} currentFilterType={currentFilterType}/>
+          <TabMenu tabItems={props.worksInfo.tabItems} changeFilterType={changeFilterType}
+                   currentFilterType={currentFilterType}/>
           <S.FlexBoxWrapperMedia justify={'space-around'} wrap={'wrap'} align={'stretch'} gap={"30px"}>
             {workItemsElements}
           </S.FlexBoxWrapperMedia>

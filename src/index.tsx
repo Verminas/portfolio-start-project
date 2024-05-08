@@ -11,16 +11,16 @@ export type TabProjectsItemsType = "all" | 'landing' | 'react' | 'spa';
 export type WorksInfoType = {
   tabItems:
     Array<{
-    title: string,
-    type: TabProjectsItemsType,
-  }>,
+      title: string,
+      type: TabProjectsItemsType,
+    }>,
   projects:
     Array<{
-    projImg: string,
+      projImg: string,
       projTitle: string,
       projText: string,
       projType: TabProjectsItemsType,
-  }>
+    }>
 }
 
 export const menuNavigationItems = ['Home', 'Skills', 'Works', 'Testimony', 'Contact'];

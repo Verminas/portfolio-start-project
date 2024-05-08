@@ -10,18 +10,18 @@ import {Footer} from "./layout/footer/Footer";
 import {skillsInfo, worksInfo} from "./index";
 
 function App() {
-    return (
-        <div className="App">
-          <Header/>
-          <Main/>
-          <Skills skillsInfo={skillsInfo}/>
-          <Works worksInfo={worksInfo}/>
-          <Testimony/>
-          <Contact/>
-          <Slogan/>
-          <Footer/>
-        </div>
-    );
+  return (
+    <div className="App">
+      <Header/>
+      <Main/>
+      <Skills skillsInfo={skillsInfo}/>
+      <Works worksInfo={worksInfo}/>
+      <Testimony/>
+      <Contact/>
+      <Slogan/>
+      <Footer/>
+    </div>
+  );
 }
 
 export default App;

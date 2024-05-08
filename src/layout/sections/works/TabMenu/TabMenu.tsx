@@ -19,7 +19,9 @@ export const TabMenu = (props: TabMenuPropsType) => {
       <li role={"tab"} key={index}>
         <Link
           as={'button'}
-          onClick={() => {props.changeFilterType(tabItem.type)}}
+          onClick={() => {
+            props.changeFilterType(tabItem.type)
+          }}
           active={props.currentFilterType === tabItem.type}
         >
           {tabItem.title}
@@ -28,8 +30,8 @@ export const TabMenu = (props: TabMenuPropsType) => {
     )
   })
   return (
-      <S.TabMenuList role={"tablist"}>
-        {tabMenuItemsElements}
-      </S.TabMenuList>
+    <S.TabMenuList role={"tablist"}>
+      {tabMenuItemsElements}
+    </S.TabMenuList>
   )
 }

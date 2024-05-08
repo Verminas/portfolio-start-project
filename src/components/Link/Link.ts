@@ -1,7 +1,7 @@
 import styled, {css} from "styled-components";
 import {theme} from "../../styles/Theme";
 
-export const Link = styled.a<{active?: boolean}>`
+export const Link = styled.a<{ active?: boolean }>`
     font-size: 14px;
     font-weight: 400;
     letter-spacing: 1px;
@@ -12,13 +12,13 @@ export const Link = styled.a<{active?: boolean}>`
     position: relative;
     z-index: 1;
 
-    &:hover{
-        &::before{
+    &:hover {
+        &::before {
             height: 10px;
         }
     }
 
-    &::before{
+    &::before {
         display: inline-block;
         content: "";
         width: 100%;
@@ -29,12 +29,12 @@ export const Link = styled.a<{active?: boolean}>`
         bottom: 5px;
         left: 0;
         z-index: -1;
-        
-        ${props => props.active && css<{active?: boolean}>`
+
+        ${props => props.active && css<{ active?: boolean }>`
             height: 10px;
         `}
     }
-    
+
     @media ${theme.media.mobile} {
         padding: 5px;
     }
