@@ -10,7 +10,15 @@ export const Menu: React.FC<MenuPropsType> = (props: MenuPropsType) => {
   const menuItemsElements = props.menuItems.map((menuItem, index) => {
     return (
       <S.MenuItem role={"menuitem"} key={index}>
-        <S.Link href={`#${menuItem.toLowerCase()}`}>{menuItem}
+        <S.NavLink to={menuItem.toLowerCase()}
+                   key={index}
+                   smooth={true}
+                   duration={50}
+                   activeClass="active"
+                   spy={true}
+                   offset={-80}
+                   delay={50}
+        >{menuItem}
           <S.Mask aria-hidden={true}>
             <span>{menuItem}</span>
           </S.Mask>
@@ -18,7 +26,7 @@ export const Menu: React.FC<MenuPropsType> = (props: MenuPropsType) => {
             <span>{menuItem}</span>
           </S.Mask>
 
-        </S.Link>
+        </S.NavLink>
       </S.MenuItem>
     )
   })
