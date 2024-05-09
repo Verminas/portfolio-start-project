@@ -42,7 +42,8 @@ const WrapperImage = styled.div`
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -30%);
+        transition: ${theme.animations.transitions.average};
 
         &::after {
             width: 100%;
@@ -58,8 +59,9 @@ const WrapperImage = styled.div`
         left: 0;
         right: 0;
         background: rgba(0, 0, 0, 0.3);
-        backdrop-filter: blur(5px);
+        backdrop-filter: blur(3px);
         opacity: 0;
+        transition: ${theme.animations.transitions.average};
     }
 
     &:hover {
@@ -69,6 +71,7 @@ const WrapperImage = styled.div`
 
         & button {
             opacity: 1;
+            transform: translate(-50%, -50%);
         }
     }
 

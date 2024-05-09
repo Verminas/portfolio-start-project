@@ -32,6 +32,7 @@ const StyledButton = styled.button`
         width: 40%;
         height: 10px;
         background-color: ${theme.colors.accent};
+        transition: ${theme.animations.transitions.average};
         
         position: absolute;
         z-index: -1;

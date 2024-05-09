@@ -33,11 +33,23 @@ const StyledBtn = styled.a`
     height: 30px;
     background-color: rgba(0, 0, 0, 0.3);
     padding: 7px;
-    
+    transform: translateY(0);
+    transition: ${theme.animations.transitions.average};
+    border-radius: 2px;
+
     position: fixed;
     right: 30px;
     bottom: 30px;
-    svg{
+
+    svg {
         fill: ${theme.colors.font};
+    }
+
+    &:hover {
+        transform: translateY(-5px);
+
+        & svg {
+            fill: ${theme.colors.accent};
+        }
     }
 `

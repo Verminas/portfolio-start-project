@@ -13,8 +13,8 @@ const Mask = styled.span`
     display: inline-block;
     height: 50%;
     overflow: hidden;
-    //outline: 1px solid red;
     color: ${theme.colors.accent};
+    transition: ${theme.animations.transitions.average};
     
     & + & {
     top: 50%;
@@ -48,6 +48,7 @@ const Link = styled.a`
         z-index: 1;
 
         transform: scale(0);
+        transition: ${theme.animations.transitions.average};
     }
 
     &:hover{
@@ -94,6 +95,7 @@ const BurgerButton = styled.button<{isOpen: boolean}>`
             background-color: ${theme.colors.font};
             position: absolute;
             transform: translateY(-10px);
+            transition: ${theme.animations.transitions.average};
 
             ${props => props.isOpen && css`
                 transform: translateY(0) rotate(-45deg);
@@ -109,6 +111,7 @@ const BurgerButton = styled.button<{isOpen: boolean}>`
             position: absolute;
             right: 0;
             transform: translateY(10px);
+            transition: ${theme.animations.transitions.average};
 
             ${props => props.isOpen && css`
                 transform: translateY(0) rotate(45deg);
@@ -119,19 +122,21 @@ const BurgerButton = styled.button<{isOpen: boolean}>`
 `
 
 const MobileMenuPopup = styled.div<{isOpen: boolean}>`
-    display: none;
-    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: rgba(31, 31, 32, 0.9);
+    position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     z-index: 99;
+    transform: translateX(-100%);
+    transition: ${theme.animations.transitions.mobileMenu};
     
     ${props => props.isOpen && css<{isOpen: boolean}>`
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        transform: translateX(0);
     `}
     
     ul {
@@ -141,6 +146,9 @@ const MobileMenuPopup = styled.div<{isOpen: boolean}>`
         //gap: 20px;
         justify-content: center;
         align-items: center;
+    }
+    ${Link}{
+        font-size: 36px;
     }
 `
 

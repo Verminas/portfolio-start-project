@@ -10,7 +10,6 @@ type SocialIconLinksPropsType = {
 }
 
 
-
 export const SocialIconLinks: React.FC<SocialIconLinksPropsType> = (props: SocialIconLinksPropsType) => {
   const socialIconsElements = props.socialIconsId.map((socialIconId, index) => {
     return (
@@ -51,6 +50,7 @@ const StyledLink = styled.a`
     display: flex;
     width: 35px;
     height: 35px;
+    transition: ${theme.animations.transitions.average};
     
     &:hover{
         background-color: ${theme.colors.accent};
