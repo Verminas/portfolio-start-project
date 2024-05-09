@@ -42,7 +42,7 @@ const MenuItem = styled.li`
         transform: scale(0);
     }
     
-    &:hover{
+    &:hover, &.active {
         &::before{
             transform: scale(1);
         }

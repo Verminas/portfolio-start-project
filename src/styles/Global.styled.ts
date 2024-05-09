@@ -12,6 +12,7 @@ export const GlobalStyle = createGlobalStyle`
 
     * {
         scroll-behavior: smooth;
+        scroll-margin: 40px;
 
         &:focus-visible {
             outline: 2px solid ${theme.colors.accent};

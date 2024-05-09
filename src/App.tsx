@@ -10,6 +10,7 @@ import {Footer} from "./layout/footer/Footer";
 import {skillsInfo, sliderInfo, worksInfo} from "./index";
 import {Particle} from "./components/Particle/Particle";
 import React from "react";
+import {GoTopBtn} from "./components/goTopBtn/GoTopBtn";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       <Contact/>
       <Slogan/>
       <Footer/>
+      <GoTopBtn/>
     </div>
   );
 }
