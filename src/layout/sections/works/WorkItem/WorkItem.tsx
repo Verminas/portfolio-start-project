@@ -10,11 +10,21 @@ type WorkItemPropsType = {
   projTitle: string,
   projText: string,
   projType: TabProjectsItemsType,
+  key: number,
 }
 
 export const WorkItem: React.FC<WorkItemPropsType> = (props: WorkItemPropsType) => {
   return (
-    <S.WrapperWorkItem>
+    <S.WrapperWorkItem
+      key={props.key}
+
+      // properties for motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      layout
+      transition={{ duration: 0.9 }}
+    >
       <S.WrapperImage>
         <img src={props.projImg} alt=""/>
         <Button name={'view project'}></Button>

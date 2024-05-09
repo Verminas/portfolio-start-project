@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import {FlexBoxWrapper} from "../../../components/FlexBoxWrapper";
 import {theme} from "../../../styles/Theme";
+import {motion} from "framer-motion";
 
 const FlexBoxWrapperMedia = styled(FlexBoxWrapper)`
     @media ${theme.media.desktop} {
@@ -9,10 +10,10 @@ const FlexBoxWrapperMedia = styled(FlexBoxWrapper)`
 `
 
 // WorkItem
-const WrapperWorkItem = styled.div`
-    width: 310px;
+const WrapperWorkItem = styled(motion.div)`
+    min-width: 330px;
     max-width: 540px;
-    //width: 100%;
+    // width: 100%;
     display: flex;
     flex-grow: 1;
     flex-direction: column;

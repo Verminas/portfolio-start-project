@@ -5,6 +5,7 @@
   "homepage": "https://Verminas.github.io/portfolio-start-project",
   "dependencies": {
     "@babel/core": "7.16.0",
+    "@emailjs/browser": "^4.3.3",
     "@emotion/react": "^11.11.4",
     "@pmmmwh/react-refresh-webpack-plugin": "0.5.3",
     "@svgr/webpack": "5.5.0",
@@ -31,6 +32,7 @@
     "eslint-config-react-app": "7.0.1",
     "eslint-webpack-plugin": "3.1.1",
     "file-loader": "6.2.0",
+    "framer-motion": "^11.1.9",
     "fs-extra": "10.0.0",
     "gh-pages": "^6.1.1",
     "html-webpack-plugin": "5.5.0",

@@ -43,6 +43,8 @@ const StyledBtn = styled.a`
 
     svg {
         fill: ${theme.colors.font};
+        width: 16px;
+        height: 16px;
     }
 
     &:hover {

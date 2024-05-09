@@ -1,14 +1,39 @@
-import React from 'react';
+import React, {ElementRef, useRef} from 'react';
 import styled from "styled-components";
 import {Button} from "../Button/Button";
 import {theme} from "../../styles/Theme";
+import emailjs from '@emailjs/browser';
+import {contactsInfo} from "../../index";
 
 export const Form: React.FC = () => {
+  const form = useRef<ElementRef<'form'>>(null);
+
+  const sendEmail = (e: any) => {
+    e.preventDefault();
+
+    if(!form.current) return;
+
+    emailjs
+      .sendForm(contactsInfo.emailJs.serviceId, contactsInfo.emailJs.templateId, form.current, {
+        publicKey: contactsInfo.emailJs.pubKey,
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+    e.target.reset();
+  };
+
   return (
-    <StyledForm action={"#"} method={"post"}>
-      <Field placeholder={'Name'} name={'name'} autoComplete={"on"}/>
-      <Field type={"email"} placeholder={'E-mail'} required={true} name={'email'} autoComplete={"on"}/>
-      <Field as={'textarea'} placeholder={'Type something...'} name={'type'} autoComplete={"on"}/>
+    <StyledForm ref={form} method={"post"} onSubmit={sendEmail}>
+      <Field placeholder={'Name'} name={'user_name'} required autoComplete={"on"}/>
+      <Field type={"email"} placeholder={'E-mail'} required name={'user_email'} autoComplete={"on"}/>
+      <Field placeholder={'Subject'} name={'subject'} required />
+      <Field as={'textarea'} placeholder={'Type something...'} required name={'message'} />
       <Button name={'send message'} type={'submit'}></Button>
     </StyledForm>
   );

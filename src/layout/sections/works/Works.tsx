@@ -7,6 +7,7 @@ import {WorkItem} from "./WorkItem/WorkItem";
 import {Container} from "../../../components/Container";
 import {S} from "./Works_Styles";
 import {TabProjectsItemsType, WorksInfoType} from "../../../index";
+import {AnimatePresence, motion} from "framer-motion";
 
 type WorksPropsType = {
   worksInfo: WorksInfoType,
@@ -32,13 +33,13 @@ export const Works: React.FC<WorksPropsType> = (props: WorksPropsType) => {
 
   const workItemsElements = filteredWorks.map((w, index) => {
     return (
-      <WorkItem
-        projImg={w.projImg}
-        projTitle={w.projTitle}
-        projText={w.projText}
-        projType={w.projType}
-        key={index}
-      />
+        <WorkItem
+          projImg={w.projImg}
+          projTitle={w.projTitle}
+          projText={w.projText}
+          projType={w.projType}
+          key={index}
+        />
     )
   })
 
@@ -50,7 +51,9 @@ export const Works: React.FC<WorksPropsType> = (props: WorksPropsType) => {
           <TabMenu tabItems={props.worksInfo.tabItems} changeFilterType={changeFilterType}
                    currentFilterType={currentFilterType}/>
           <S.FlexBoxWrapperMedia justify={'space-around'} wrap={'wrap'} align={'stretch'} gap={"30px"}>
+            <AnimatePresence>
               {workItemsElements}
+            </AnimatePresence>
           </S.FlexBoxWrapperMedia>
         </FlexBoxWrapper>
       </Container>
