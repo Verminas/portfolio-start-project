@@ -10,6 +10,8 @@ type WorkItemPropsType = {
   projTitle: string,
   projText: string,
   projType: TabProjectsItemsType,
+  demoLinkHref: string,
+  codeLinkHref: string,
   key: number,
 }
 
@@ -33,8 +35,8 @@ export const WorkItem: React.FC<WorkItemPropsType> = (props: WorkItemPropsType) 
         <S.Title>{props.projTitle}</S.Title>
         <S.Text>{props.projText}</S.Text>
         <FlexBoxWrapper gap={'20px'}>
-          <Link active href="#">Demo</Link>
-          <Link href="#">Code</Link>
+          <Link active href={props.demoLinkHref}>Demo</Link>
+          <Link href={props.codeLinkHref}>Code</Link>
         </FlexBoxWrapper>
       </S.WrapperInfo>
     </S.WrapperWorkItem>

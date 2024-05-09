@@ -20,6 +20,8 @@ export type WorksInfoType = {
       projTitle: string,
       projText: string,
       projType: TabProjectsItemsType,
+      demoLinkHref: string,
+      codeLinkHref: string,
     }>
 }
 
@@ -82,14 +84,18 @@ export const worksInfo: WorksInfoType = {
       projTitle: 'social network',
       projText: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ' +
         'ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
-      projType: "spa"
+      projType: "spa",
+      demoLinkHref: '#',
+      codeLinkHref: '#',
     },
     {
       projImg: imgWorkSrc2,
       projTitle: 'timer',
       projText: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore " +
         "et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit  ut labore et dolore magna aliqua Ut enim",
-      projType: "react"
+      projType: "react",
+      demoLinkHref: '#',
+      codeLinkHref: '#',
     },
   ]
 };

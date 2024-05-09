@@ -7,7 +7,7 @@ import {WorkItem} from "./WorkItem/WorkItem";
 import {Container} from "../../../components/Container";
 import {S} from "./Works_Styles";
 import {TabProjectsItemsType, WorksInfoType} from "../../../index";
-import {AnimatePresence, motion} from "framer-motion";
+import {AnimatePresence} from "framer-motion";
 
 type WorksPropsType = {
   worksInfo: WorksInfoType,
@@ -38,6 +38,8 @@ export const Works: React.FC<WorksPropsType> = (props: WorksPropsType) => {
           projTitle={w.projTitle}
           projText={w.projText}
           projType={w.projType}
+          codeLinkHref={w.codeLinkHref}
+          demoLinkHref={w.demoLinkHref}
           key={index}
         />
     )
