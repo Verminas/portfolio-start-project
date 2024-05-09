@@ -26,23 +26,31 @@ const Mask = styled.span`
 `
 const MenuItem = styled.li`
     position: relative;
-    
+`
+const Link = styled.a`
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 55px;
+    text-align: center;
+    color: transparent;
+
     &::before{
         content: "";
         display: inline-block;
         height: 3px;
         background-color: ${theme.colors.accent};
-        
+
         position: absolute;
         top: 50%;
         left: -10px;
         right: -10px;
         z-index: 1;
-        
+
         transform: scale(0);
     }
-    
-    &:hover, &.active {
+
+    &:hover{
         &::before{
             transform: scale(1);
         }
@@ -55,14 +63,6 @@ const MenuItem = styled.li`
             }
         }
     }
-`
-const Link = styled.a`
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 30px;
-    font-weight: 400;
-    line-height: 55px;
-    text-align: center;
-    color: transparent;
 `
 
 // Mobile Menu
