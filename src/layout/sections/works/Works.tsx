@@ -50,7 +50,7 @@ export const Works: React.FC<WorksPropsType> = (props: WorksPropsType) => {
           <TabMenu tabItems={props.worksInfo.tabItems} changeFilterType={changeFilterType}
                    currentFilterType={currentFilterType}/>
           <S.FlexBoxWrapperMedia justify={'space-around'} wrap={'wrap'} align={'stretch'} gap={"30px"}>
-            {workItemsElements}
+              {workItemsElements}
           </S.FlexBoxWrapperMedia>
         </FlexBoxWrapper>
       </Container>
