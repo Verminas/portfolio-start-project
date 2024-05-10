@@ -4,6 +4,8 @@ import {S} from "../HeaderMenu_Styles";
 type MenuPropsType = {
   menuItems: Array<string>,
   itemsId?: Array<string>,
+  setMenuIsOpen?: any | undefined,
+  menuIsOpen?: boolean | undefined,
 }
 
 export const Menu: React.FC<MenuPropsType> = (props: MenuPropsType) => {
@@ -12,12 +14,13 @@ export const Menu: React.FC<MenuPropsType> = (props: MenuPropsType) => {
       <S.MenuItem role={"menuitem"} key={index}>
         <S.NavLink to={menuItem.toLowerCase()}
                    key={index}
+                   onClick={() => props.menuIsOpen && props.setMenuIsOpen(false)}
                    smooth={true}
-                   duration={50}
+                   // duration={50}
                    activeClass="active"
                    spy={true}
-                   offset={-80}
-                   delay={50}
+                   offset={-50}
+                   // delay={50}
         >{menuItem}
           <S.Mask aria-hidden={true}>
             <span>{menuItem}</span>

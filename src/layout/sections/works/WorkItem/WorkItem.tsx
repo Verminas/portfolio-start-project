@@ -12,14 +12,11 @@ type WorkItemPropsType = {
   projType: TabProjectsItemsType,
   demoLinkHref: string,
   codeLinkHref: string,
-  key: number,
 }
 
 export const WorkItem: React.FC<WorkItemPropsType> = (props: WorkItemPropsType) => {
   return (
     <S.WrapperWorkItem
-      key={props.key}
-
       // properties for motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}

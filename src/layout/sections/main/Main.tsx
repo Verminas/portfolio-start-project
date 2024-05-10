@@ -32,6 +32,7 @@ export const Main: React.FC = () => {
             perspective={500}
             glareEnable={true}
             glareMaxOpacity={0.45}
+            tiltEnable={window.innerWidth > theme.media.mobileTs}
             scale={1.02}
             glareColor={theme.colors.accent}
           >
