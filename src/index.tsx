@@ -26,7 +26,24 @@ export type WorksInfoType = {
 }
 
 export const menuNavigationItems = ['Home', 'Skills', 'Works', 'Testimony', 'Contact'];
-export const socialIconsId = ['instSvg', 'telegramSvg', 'vkSvg', 'linkedinSvg'];
+export const socialIconsInfo = [
+  {
+    iconId: 'instSvg',
+    linkHref: 'https://www.instagram.com/',
+  },
+  {
+    iconId: 'telegramSvg',
+    linkHref: 'https://web.telegram.org/a/',
+  },
+  {
+    iconId: 'vkSvg',
+    linkHref: 'https://vk.com/',
+  },
+  {
+    iconId: 'linkedinSvg',
+    linkHref: 'https://ru.linkedin.com/',
+  },
+]
 export const skillsInfo = [
   {
     iconId: 'htmlSvg',

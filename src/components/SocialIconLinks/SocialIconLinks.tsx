@@ -5,17 +5,20 @@ import {theme} from "../../styles/Theme";
 
 
 type SocialIconLinksPropsType = {
-  socialIconsId: Array<string>,
+  socialIconsInfo: {
+    iconId: string,
+    linkHref: string,
+  }[],
   isHeader?: boolean | undefined,
 }
 
 
 export const SocialIconLinks: React.FC<SocialIconLinksPropsType> = (props: SocialIconLinksPropsType) => {
-  const socialIconsElements = props.socialIconsId.map((socialIconId, index) => {
+  const socialIconsElements = props.socialIconsInfo.map((icon, index) => {
     return (
       <li key={index}>
-        <StyledLink href="#" aria-label={"link to social network"}>
-          <Icon iconId={socialIconId} width={'50'} height={'50'} viewBox={'0 0 20 20'}></Icon>
+        <StyledLink href={icon.linkHref} aria-label={"link to social network"} target="_blank">
+          <Icon iconId={icon.iconId} width={'50'} height={'50'} viewBox={'0 0 20 20'}></Icon>
         </StyledLink>
       </li>
     )
